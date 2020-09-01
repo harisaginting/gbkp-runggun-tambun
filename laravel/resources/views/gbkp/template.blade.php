@@ -22,7 +22,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:description" content="{{$description ??'GBKP Runggun Tambun - Gereja Batak Karo Protestan Runggun Tambun'}}" />
     <meta name="twitter:title" content="{{$title ?? 'GBKP RUNGGUN TAMBUN'}}" />
-    <meta name="twitter:image" content="{{ {{ env('APP_URL_FRONTEND') }} }}/public/img/logo-gbkp.png" />
+    <meta name="twitter:image" content="{{ env('APP_URL_FRONTEND') }}/public/img/logo-gbkp.png" />
 
     <!-- Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>

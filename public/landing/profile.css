@@ -1,0 +1,176 @@
+#page-wrapper{
+	padding:80px 50px 10px 50px;
+}
+
+#btn-change-photo{
+	height: 1.5em;
+    width: 1.5em;
+    /* background: red; */
+    text-align: center;
+    z-index: 20;
+    position: absolute;
+    right: 5em;
+    bottom: 2em;
+    border: 2px solid #fff;
+    font-size: 1em;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.nav-tabs .nav-link.active a, .nav-tabs .nav-link.active a:hover,a:hover{
+	color: #495057 !important;
+}
+
+#container-title-name{
+	font-size : 2em !important;
+	text-align: left;
+    font-weight: 700;
+	font-family: Montserrat, sans-serif;
+	margin-top: 1.2em;
+    margin-bottom: 1.2em;
+}
+
+.avatar{
+	height: 8em;
+}
+
+.form-control{
+    border-top: 0px !important;
+    border-left: 0px !important;
+    border-right: 0px !important;
+    background: #ffffff00 !important;
+    border-color: #fbed35 !important;
+    color: #fff !important;
+    margin-left: 9em !important;
+    /*width: : 3em !important;*/
+}
+
+label{
+    margin-bottom: -2.5em;
+}
+
+.tab-content{
+	border: 1px solid #aaa
+}
+
+#biodata{
+	padding-top: 1em;
+}
+
+.nav-link.active {
+	background: #aaa;
+	border-radius: 0px;
+}
+
+#btn-log-out{
+	height: 3em;
+	width: 7em;
+    font-size: 0.7em;
+    font-weight: 700;
+}
+
+#btn-edit-profile{
+	height: 3em;
+	width:10em;
+    font-size: 0.7em;
+    color: #fff;
+    font-weight: 700;
+}
+
+#btn-upload-photo{
+	height: 3em;
+	width:12em;
+	text-align: center;
+    font-size: 0.7em;
+    color: #fff;
+    font-weight: 700;
+}
+
+#btn-pilih-upload-photo{
+    height: 3em;
+    width:12em;
+    text-align: center;
+    font-size: 0.7em;
+    color: #000;
+    font-weight: 700;
+}
+
+.modal-content{
+	background-color: #2a327d !important;
+	top: 2em;
+}
+
+form{
+    margin : 0px !important;
+}
+
+/*IMAGE UPLOAD*/
+.profile-pic {
+    /*max-width: 200px;
+    max-height: 200px;
+    display: block;*/
+}
+
+.file-upload {
+    display: none;
+}
+.circle {
+    border-radius: 1000px !important;
+    overflow: hidden;
+    width: 128px;
+    height: 128px;
+    /*border: 2px solid rgba(255, 255, 255, 0.7);*/
+    margin: auto;
+}
+img {
+    max-width: 100%;
+    height: 128px;
+    width: 128px;
+}
+.p-image {
+    position: absolute;
+    top: 5em;
+    right: 5em;
+    color: #f9c237;
+    transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+}
+.p-image:hover {
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+}
+.upload-button {
+  font-size: 1.2em;
+}
+
+.upload-button:hover {
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+  color: #999;
+}
+
+@media screen and (max-width: 480px){
+	#page-wrapper{
+		padding:20px 20px 80px 20px;
+	}
+
+	#container-title-name{
+        font-size : 1.5em !important;
+		text-align: center;
+		margin-top: 0.1em;
+		margin-bottom: 0.5em;
+	}
+
+	.label-field-profile{
+		font-size: 0.8em;
+	}
+
+	.label-value-profile{
+		font-size: 1em;
+		font-weight: 700em;
+		font-family: Montserrat, sans-serif;
+		margin-left: 2em;
+		border-bottom: 1px solid #aaa;
+	}
+
+	#btn-change-photo{
+		right: 7em	
+	}
+}

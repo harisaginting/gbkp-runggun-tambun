@@ -1,0 +1,13 @@
+.btn-submit{
+	padding-left: 25px;
+    padding-right: 25px;
+    font-size: 10px;
+    font-weight: 700;	
+    border-radius: 10px !important;
+    background-color: #747679;
+    border-color: #2d2e2f;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    color: #fafafa;
+    line-height: 0.5;
+}

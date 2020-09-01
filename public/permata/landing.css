@@ -1,0 +1,94 @@
+/*Navbar styling*/
+#navbar-top{
+  background:#353a7863;
+  color: #fff;
+  font-size: 20px;
+}
+
+.navbar-light .navbar-nav .nav-link{
+  color: #fafafa;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.nav-link.active,
+.nav-link:hover,
+.nav-link:focus {
+  color: #fafa;
+  background-color: #fbed35;
+  border-radius: 5px;
+  border-bottom: 1px #000 solid;
+}
+
+#navbar-bottom{
+  background-color: #fafafa;
+  padding: 0em 2em;
+}
+
+.nav-link-bottom{
+  color : #00000055;
+  font-family: Roboto, sans-serif;
+  font-size: 1.2em;
+}
+
+.nav-link-bottom.active{
+  color : #353a78;
+  font-family: Roboto, sans-serif;
+  font-weight: 900;
+}
+/*End Navbar styling*/
+
+
+/*CUSTOM*/
+
+.error{
+  text-transform: inherit !important;
+  color: #f00;
+}
+
+a {
+	color: #00903f;
+    font-weight: 900;
+}
+
+.loader-page{
+	min-height: 100%;
+    width: 100%;
+    background: #45498a;
+    position: absolute;
+    display: block;
+    z-index: 9999;
+    text-align: center;
+}
+
+.loader-page > img{
+	height: 1em;
+    width: 5em;
+    top: 45%;
+    left: 48%;
+    position: absolute;
+}
+
+.loader-page-text{
+	height: 2em;
+    top: 49%;
+    left: 47%;
+    position: absolute;
+    font-weight: 700;
+}
+
+.hidden{
+	display: none !important;
+}
+
+@media screen and (max-width: 780px) {
+
+	.loader-page > img{
+		left: 40%;
+	}
+	.loader-page-text{
+		left: 36%;
+	}
+
+}

@@ -1,0 +1,5 @@
+# Group 1
+User-agent: Googlebot
+Disallow: /application
+
+Sitemap: https://www.gbkprungguntambun.org/sitemap.xml

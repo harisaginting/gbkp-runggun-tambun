@@ -1,0 +1,161 @@
+#page-wrapper{
+	padding:80px 50px 10px 50px;
+}
+
+#btn-change-photo{
+	height: 1.5em;
+    width: 1.5em;
+    /* background: red; */
+    text-align: center;
+    z-index: 20;
+    position: absolute;
+    right: 5em;
+    bottom: 2em;
+    border: 2px solid #fff;
+    font-size: 1em;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.nav-tabs .nav-link.active a, .nav-tabs .nav-link.active a:hover,a:hover{
+	color: #495057 !important;
+}
+
+#container-title-name{
+	font-size : 1.5em !important;
+	text-align: left;
+	font-family: Montserrat, sans-serif;
+	margin-top: 1em;
+}
+
+.avatar{
+	min-height: 6.2em;
+	max-height: 6.2em;
+	height: 6.2em;
+	max-width: 6.2em;
+	margin: 0.2em;
+	border-radius: 50%;
+}
+
+.form-control{
+    border-top: 0px !important;
+    border-left: 0px !important;
+    border-right: 0px !important;
+    background: #ffffff00 !important;
+    border-color: #fbed35 !important;
+    color: #fff !important;
+    margin-left: 9em !important;
+    /*width: : 3em !important;*/
+}
+
+label{
+    margin-bottom: -2.5em;
+}
+
+.tab-content{
+	border: 1px solid #aaa
+}
+
+#biodata{
+	padding-top: 1em;
+}
+
+.nav-link.active {
+	background: #aaa;
+	border-radius: 0px;
+}
+
+.label-anggota{
+	font-size: 1.2em;
+	font-weight: 800;
+}
+
+.label-anggota-count{
+	font-size:3em;
+	font-weight: 800;
+	line-height: 1em;
+}
+
+.label-sub-anggota{
+	font-size: 0.8em;
+	font-weight: 700;
+}
+.label-sub-anggota-count{
+	font-size: 2.4em;
+	font-weight: 700;
+	line-height: 0.7em;
+}
+
+.logo-permata{
+	width: 50%;
+	margin:auto;
+}
+
+.anggota-sektor{
+	background: #00000099;
+	padding: 5px;
+	text-align: center;
+	border-radius: 10px;
+	margin-top: -0.5em;
+	margin-bottom: 1.2em;
+}
+
+.person-name{
+	margin-top: -1em;
+	width: 100%;
+	color: #000;
+	font-size: 0.7em;
+	padding: 0px 5px;
+	text-align:left;
+	font-family: Montserrat, sans-serif;
+	font-weight: 700;
+}
+
+.container-person{
+	width: 6.5em;
+	margin: 2px 3px 7px 3px;
+	border-radius: 10px;
+}
+
+.info-location{
+	font-size: 0.6em;
+    font-weight: 700;
+    padding-right: 5px !important;
+    margin-bottom: -0.2em !important;
+}
+
+
+@media screen and (max-width: 780px){
+	#page-wrapper{
+		padding:20px 10px 80px 10px;
+	}
+
+	#container-title-name{
+		text-align: center;
+		margin-top: -0.5em;
+		margin-bottom: 0.5em;
+	}
+
+	.label-field-profile{
+		font-size: 0.8em;
+	}
+
+	.label-value-profile{
+		font-size: 1em;
+		font-weight: 700em;
+		font-family: Montserrat, sans-serif;
+		margin-left: 2em;
+		border-bottom: 1px solid #aaa;
+	}
+
+	.container-chart-anggota{
+		padding-left: 0px;	
+		padding-right: 0px;	
+	}
+
+	.anggota-sektor{
+		max-height: 20em;
+    	overflow-x: scroll;
+	}
+
+}

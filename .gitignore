@@ -1,2 +1,13 @@
 sftp-config.json
 setup/anggota_permata.sql
+/laravel/node_modules
+/laravel/public/hot
+/laravel/public/storage
+/laravel/storage/*.key
+/vendor
+/laravel/env
+/laravel/phpunit.result.cache
+/laravel/Homestead.json
+/laravel/Homestead.yaml
+/laravel/npm-debug.log
+/laravel/yarn-error.log

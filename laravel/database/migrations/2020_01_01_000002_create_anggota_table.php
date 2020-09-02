@@ -17,7 +17,7 @@ class CreateAnggotaTable extends Migration
             $table->bigIncrements('id');
             $table->uuid('uuid')->nullable();
             $table->integer('role')->default(0);
-            $table->string('email')->nullable()->unique();
+            $table->string('email')->nullable();
             $table->string('username')->nullable()->unique();
             $table->string('runggun')->nullable();
             $table->integer('sektor')->nullable();

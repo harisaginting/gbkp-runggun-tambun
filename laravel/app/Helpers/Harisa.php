@@ -39,7 +39,7 @@ class Harisa
         if(!$reverse){
             return array("KA/KR","PERMATA","MORIA","MAMRE","SAITUN");
         }
-        return array("SAITUN","MAMRE","MOREIA","PERMATA","KA/KR");
+        return array("SAITUN","MAMRE","MORIA","PERMATA","KA/KR");
     }
 
     public static function get_pekerjaan(){

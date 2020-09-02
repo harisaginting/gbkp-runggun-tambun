@@ -85,7 +85,7 @@
                                 <div class="col-md-6 col-sm-12">
                                       <div class="form-group">
                                         <label>Tahun Ngawan</label>
-                                        <input type="text" name="tahun_ngawan" id="tahun_ngawan" class="form-control date-picker-year" placeholder="Tahun Ngawan / Sidi" value="" readonly>
+                                        <input type="number" name="tahun_ngawan" id="tahun_ngawan" class="form-control" placeholder="Tahun Ngawan / Sidi" max="{{date('Y')}}">
                                       </div>
 
                                       <div class="form-group">

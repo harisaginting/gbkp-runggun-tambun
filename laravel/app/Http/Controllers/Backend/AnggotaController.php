@@ -95,7 +95,7 @@ class AnggotaController extends Controller
         }
 
         if(!empty($rawBirthday[0])){
-            if(date('Y') - intval($rawBirthday[2]) > 55){
+            if(date('Y') - intval($rawBirthday[2]) > 65){
                 $kategorial = "SAITUN";
             }
         }

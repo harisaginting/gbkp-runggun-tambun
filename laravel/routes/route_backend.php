@@ -40,6 +40,9 @@ Route::group(['domain' => env('APP_URL')], function () {
     		Route::prefix('v1')->group(function(){
     			// WITH AUTH
     			Route::group(['middleware' => 'harisa-api'], function(){
+    				Route::post('dashboard/chart-total-kategorial', 'DashboardController@chartTotalKategorial')->name('app-dashboard-chart-total-kategorial');
+
+
     				Route::post('anggota/save', 'AnggotaController@save')->name('app-anggota-save');
     				Route::get('anggota/get/{id}', 'AnggotaController@get')->name('app-anggota-get');
     				Route::get('anggota/select', 'AnggotaController@select')->name('app-anggota-select');

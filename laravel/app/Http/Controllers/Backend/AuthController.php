@@ -87,58 +87,6 @@ class AuthController extends Controller
         return $result;
     }
 
-    function logout(){
-        Session::flush();
-        return redirect(url('/application/login'));
-    }
-
-    function register(){
-        $pekerjaan  = Harisa::get_pekerjaan();
-        $sektor     = Harisa::get_sektor();
-        $marga      = Harisa::get_marga();
-        $pendidikan = Harisa::get_pendidikan();
-        return view('authtentication.register', compact('marga','sektor','pekerjaan','pendidikan'));
-    }
-
-    function registerProcess(Request $request){
-        $data['nama'] = $request->input('nama');
-        $data['marga'] = $request->input('marga');
-        $data['jenis_kelamin'] = $request->input('jenis_kelamin');
-        $data['tempat_lahir'] = $request->input('tempat_lahir');
-        $data['tanggal_lahir'] = $request->input('tanggal_lahir');
-        $data['sekolah'] = $request->input('sekolah');
-        $data['pendidikan'] = $request->input('pendidikan');
-        $data['jurusan'] = $request->input('jurusan');
-        $data['pekerjaan'] = $request->input('pekerjaan');
-        $data['telepon'] = $request->input('telepon');
-        $data['email'] = $request->input('email');
-        $data['domisili'] = $request->input('domisili');
-        $data['alamat'] = $request->input('alamat');
-        $data['tahun_ngawan'] = $request->input('tahun_ngawan');
-        $data['lokasi_ngawan'] = $request->input('lokasi_ngawan');
-        $data['instagram'] = $request->input('instagram');
-        $data['sektor'] = $request->input('sektor');
-        $data['hobi'] = $request->input('hobi');
-        $data['kantor'] = $request->input('kantor');
-        $data['role']  = 3;
-        $data['password']   = Hash::make($request->input('password'));
-
-
-
-        $id_anggota = DB::table('anggota')->insertGetId($data);
-        
-        if(!empty($id_anggota)){
-            Session::flash('notification', 'Anda berhasil mendaftar silahkan hubungi pengurus runggun untuk mengaktifkan akun anda');
-            return redirect(url('/').'/login');
-        }else{
-            Session::flash('notification', 'Proses mendaftar gagal');
-            return redirect()->back();
-        }
-
-
-
-    }
-
     function checkEmailAvaliable(Request $request){
         $email = $request->input('email');
         $q = DB::table('anggota')->select(DB::raw('count(id) as total'))->WhereRaw("UPPER(email) like '%".strtoupper($email)."%'")->first();

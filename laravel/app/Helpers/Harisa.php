@@ -35,6 +35,13 @@ class Harisa
         return DB::table('m_general')->where('type','=','sektor')->orderBy('value','asc')->get()->toArray();
     }
 
+    public static function get_kategorial($reverse = false){
+        if(!$reverse){
+            return array("KA/KR","PERMATA","MORIA","MAMRE","SAITUN");
+        }
+        return array("SAITUN","MAMRE","MOREIA","PERMATA","KA/KR");
+    }
+
     public static function get_pekerjaan(){
         return DB::table('m_general')->where('type','=','pekerjaan')->orderBy('value','asc')->get()->toArray();
     }

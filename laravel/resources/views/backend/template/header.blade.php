@@ -3,8 +3,8 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" href="{{url('/app')}}">
-      <img class="navbar-brand-full" src="{{url('public/img/logo_text_permata.png')}}" width="89" height="25" alt="Logo Permata">
-      <img class="navbar-brand-minimized" src="{{url('public/img/logo_permata.png')}}" width="30" height="30" alt="Logo Permata">
+      <img class="navbar-brand-full" src="{{url('public/img/logo-gbkp.png')}}" width="30" height="30" alt="Logo GBKP">
+      <img class="navbar-brand-minimized" src="{{url('public/img/logo-gbkp.png')}}" width="30" height="30" alt="Logo GBKP">
     </a>
     <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
       <span class="navbar-toggler-icon"></span>

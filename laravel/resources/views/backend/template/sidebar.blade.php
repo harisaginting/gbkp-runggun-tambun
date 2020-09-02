@@ -8,7 +8,7 @@
               </a>
             </li>
 
-            <li class="nav-item nav-dropdown">
+            <li class="nav-item nav-dropdown {{Request::segment(1) == 'anggota' || Request::segment(1) == 'keluarga' ? 'open' : ''}}">
               <a class="nav-link nav-dropdown-toggle {{Request::segment(1) == 'anggota' || Request::segment(1) == 'keluarga' ? 'active' : ''}}" href="#">
               <i class="nav-icon fa fa-user-circle-o"></i> Anggota</a>
               <ul class="nav-dropdown-items">

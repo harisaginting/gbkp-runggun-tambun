@@ -112,8 +112,6 @@ class KeluargaController extends Controller
                 $d["id_keluarga"]   = $modelKeluarga->id;
                 $d["id_anggota"]    = $value["anggota"];
                 $d["status_anggota"]= $value["status"];
-                $d["updated_at"]    = Carbon::now();
-                $d["created_at"]    = Carbon::now();
                 array_push($ModelKeluargaDetail, $d);
             }
             KeluargaDetail::insert($ModelKeluargaDetail);

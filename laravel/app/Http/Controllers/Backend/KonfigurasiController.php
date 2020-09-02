@@ -43,10 +43,13 @@ class KonfigurasiController extends Controller
         echo json_encode($output); 
     }
 
-    public function getConfig($type)
+    public function getConfig($type, Request $r)
     {   
-        $request    = new Request; 
-        $q          = $request->input("q");
+
+        $q          = $r->get("q");
+        if (empty($q)){
+            $q = $r->get('q');
+        }
         echo json_encode(Harisa::getConfigByType($type, $q)) ;
     }
 

@@ -27,6 +27,63 @@
     opacity: 1;
   }
 
+  .container-img-kategorial{
+    text-align: center;
+  }
+
+  .line-kategorial{
+        border-bottom: 3px solid var(--main-secondary-3);
+  }
+
+  .subtext-kategorial {
+      font-size: 1em;
+      font-weight: 600;
+      font-family: Poppins, sans-serif;
+      color: var(--main-secondary);
+  }
+
+  .img-kategorial{
+    max-width: 70px;
+    max-height: 70px;
+  }
+
+  ul.contact li {
+      list-style: none;
+      text-decoration: none;
+      margin: 0.5em 0 0 0;
+      padding: 0 0 0 1.25em;
+      position: relative;
+  }
+
+  #visimisi > .row > .card > .w-100{
+    min-height: 400px;
+  }
+
+  .title-visimisi{
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 5em;
+    letter-spacing: 0.08em;
+    padding-top: 5%;
+    padding-left: 10px;
+  }
+
+  .content-visi{
+    padding-left: 30px;
+    font-family: 'Roboto';
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+
+  .content-misi{
+    padding-top: 10px;
+    padding-left: 20px;
+    font-family: 'Roboto';
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--main-white);
+  }
+
 </style>
 @endsection
 

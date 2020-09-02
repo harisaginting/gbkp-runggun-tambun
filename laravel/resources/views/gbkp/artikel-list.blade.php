@@ -1,7 +1,6 @@
 @extends('gbkp.template')
 
 @section('header-css')
-<link rel="stylesheet" href="{{url('public/gbkp/landing.css?v=').date('s')}}" />
 <style type="text/css">
   .title-artikel{
     font-size: 2em !important;

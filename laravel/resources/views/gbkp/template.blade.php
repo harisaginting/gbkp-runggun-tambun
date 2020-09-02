@@ -37,6 +37,9 @@
     <link rel="stylesheet" href="{{url('vendor/bootstrap.min.css')}}" />
     <script src="{{url('vendor/bootstrap.min.js')}}"></script>
 
+    <!-- custom -->
+    <link rel="stylesheet" href="{{url('public/gbkp/landing.css?v=').date('s')}}" />
+
     <!-- Icon -->
     <link rel="icon" href="{{url('public/img/logo32x32.png')}}" sizes="32x32" />
     <link rel="stylesheet" href="{{url('vendor/fontawesome-all.min.css')}}" />

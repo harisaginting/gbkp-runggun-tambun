@@ -434,31 +434,48 @@ var Page = function () {
                     $("#telepon").val(user.telepon);
                     $("#alamat").val(user.alamat);
                     
-                    let tanggalLahirArr = user.tanggal_lahir.split("-");
-                    $("#tanggal_lahir").val(tanggalLahirArr[2]+"-"+tanggalLahirArr[1]+"-"+tanggalLahirArr[0]);
+                    if(user.tanggal_lahir !== null && user.tanggal_lahir !== "null" && user.tanggal_lahir !== ""){
+                      let tanggalLahirArr = user.tanggal_lahir.split("-");
+                      $("#tanggal_lahir").val(tanggalLahirArr[2]+"-"+tanggalLahirArr[1]+"-"+tanggalLahirArr[0]);
+                    }
 
-                    let marga = new Option(user.nama_marga, user.marga, true, true);
-                    $('#marga').append(marga).trigger('change');
+                    if(user.marga !== null && user.marga !== "null" && user.marga !== ""){
+                      let marga = new Option(user.nama_marga, user.marga, true, true);
+                      $('#marga').append(marga).trigger('change');
+                    }
+                    
+                    if(user.pendidikan !== null && user.pendidikan !== "null" && user.pendidikan !== ""){
+                      let pendidikan = new Option(user.nama_pendidikan, user.pendidikan, true, true);
+                      $('#pendidikan').append(pendidikan).trigger('change');
+                    }
+                    
+                    if(user.pekerjaan !== null && user.pekerjaan !== "null" && user.pekerjaan !== ""){
+                      let pekerjaan = new Option(user.nama_pekerjaan, user.pekerjaan, true, true);
+                      $('#pekerjaan').append(pekerjaan).trigger('change');
+                    }
 
-                    let pendidikan = new Option(user.nama_pendidikan, user.pendidikan, true, true);
-                    $('#pendidikan').append(pendidikan).trigger('change');
+                    if(user.sektor !== null && user.sektor !== "null" && user.sektor !== ""){
+                      let sektor = new Option(user.nama_sektor, user.sektor, true, true);
+                      $('#sektor').append(sektor).trigger('change');
+                    }
 
-                    let pekerjaan = new Option(user.nama_pekerjaan, user.pekerjaan, true, true);
-                    $('#pekerjaan').append(pekerjaan).trigger('change');
+                    if(user.provinsi !== null && user.provinsi !== "null" && user.provinsi !== ""){
+                      let provinsi = new Option(user.provinsi, user.domisili_provinsi, true, true);
+                      $('#domisili_provinsi').append(provinsi).trigger('change');
+                    }
 
-                    let sektor = new Option(user.nama_sektor, user.sektor, true, true);
-                    $('#sektor').append(sektor).trigger('change');
+                    if(user.kota !== null && user.kota !== "null" && user.kota !== ""){
+                      let kota = new Option(user.kota, user.domisili_kota, true, true);
+                      $('#domisili_kota').append(kota).trigger('change');
+                    }
 
-                    let provinsi = new Option(user.provinsi, user.domisili_provinsi, true, true);
-                    $('#domisili_provinsi').append(provinsi).trigger('change');
-
-                    let kota = new Option(user.kota, user.domisili_kota, true, true);
-                    $('#domisili_kota').append(kota).trigger('change');
-
-                    let kecamatan = new Option(user.kecamatan, user.domisili_kecamatan, true, true);
-                    $('#domisili_kecamatan').append(kecamatan).trigger('change');
+                    if(user.kecamatan !== null && user.kecamatan !== "null" && user.kecamatan !== ""){
+                      let kecamatan = new Option(user.kecamatan, user.domisili_kecamatan, true, true);
+                      $('#domisili_kecamatan').append(kecamatan).trigger('change');
+                    }
+                  
                 }else{
-                   
+                  alrt("terjadi kesalahan");                   
                 }
             });
 

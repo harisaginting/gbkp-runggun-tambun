@@ -18,7 +18,7 @@ class Harisa
         $data = DB::table('m_general')->whereRaw("UPPER(type) = '".trim($type)."'");   
         
         if(!empty($q)){
-            $data->whereRAW("UPPER(value) like '%".strtoupper($q)."%'");
+            $data = $data->whereRAW("UPPER(value) like '%".strtoupper($q)."%'");
         }
         return $data->orderBy('value','asc')->get()->toArray();
     }

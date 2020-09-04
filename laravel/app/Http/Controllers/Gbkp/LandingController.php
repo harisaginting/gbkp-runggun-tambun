@@ -35,11 +35,18 @@ class LandingController extends Controller
     {	
 
     	if (empty($key)) {
-    		$artikelList     = Artikel::select("*", DB::raw("DATE_FORMAT(updated_at,'%d-%m-%Y') AS publish_at "))->orderBy("updated_at","desc")->get();
+    		$artikel     = Artikel::select("*", DB::raw("DATE_FORMAT(updated_at,'%d-%m-%Y') AS publish_at "))->orderBy("updated_at","desc")->get();
     		return view('gbkp.artikel-list', compact('artikelList'));
     	}
 
-    	$artikel = Artikel::select("*", DB::raw("DATE_FORMAT(updated_at,'%d-%m-%Y') AS publish_at "))->whereUrlKey(urldecode($key))->first()->toArray();
+    	$artikel = Artikel::select("*", DB::raw("DATE_FORMAT(updated_at,'%d-%m-%Y') AS publish_at "))->whereUrlKey(urldecode($key))->first();
+
+        if(!empty($artikel)){
+             $artikel = $artikel->toArray();
+        }else{
+            $artikelList     = Artikel::select("*", DB::raw("DATE_FORMAT(updated_at,'%d-%m-%Y') AS publish_at "))->orderBy("updated_at","desc")->get();
+            return view('gbkp.artikel-list', compact('artikelList'));
+        }
     	$title 			= !empty($artikel["title"]) ? $artikel["title"] : null;
     	$description 	= !empty($artikel["short_description"]) ? $artikel["short_description"] : null;
 

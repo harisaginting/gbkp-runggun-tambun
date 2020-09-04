@@ -33,12 +33,12 @@
                   <i class="nav-icon fa fa-star"></i> Umum</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link {{ Request::segment(1) == 'ibadah' && Request::segment(2) == 'pa'? 'active' : ''}}" href="{{url('/')}}">
+                  <a class="nav-link {{ Request::segment(1) == 'ibadah' && Request::segment(2) == 'pa'? 'active' : ''}}" href="#">
                   <i class="nav-icon fa fa-star"></i> P.J.J
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link {{ Request::segment(1) == 'ibadah' && Request::segment(2) == 'pa'? 'active' : ''}}" href="{{url('/')}}">
+                  <a class="nav-link {{ Request::segment(1) == 'ibadah' && Request::segment(2) == 'pa'? 'active' : ''}}" href="#">
                   <i class="nav-icon fa fa-star"></i> P.A
                   </a>
                 </li>

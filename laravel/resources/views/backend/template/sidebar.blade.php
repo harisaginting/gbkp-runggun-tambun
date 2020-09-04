@@ -4,7 +4,6 @@
             <li class="nav-item">
               <a class="nav-link" href="{{route('app-dashboard')}}">
                 <i class="nav-icon icon-speedometer"></i> Dashboard
-                <span class="badge badge-warning">dev.</span>
               </a>
             </li>
 
@@ -19,6 +18,28 @@
                 <li class="nav-item">
                   <a class="nav-link {{ Request::segment(1) == 'keluarga'? 'active' : ''}}" href="{{url('/')}}/keluarga">
                   <i class="nav-icon fa fa-group"></i> Tata Keluarga
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            
+            <li class="nav-item nav-dropdown {{Request::segment(1) == 'ibadah' ? 'open' : ''}}">
+              <a class="nav-link nav-dropdown-toggle {{Request::segment(1) == 'ibadah' ? 'active' : ''}}" href="#">
+              <i class="nav-icon fa fa-heart-o"></i> Ibadah <span class="badge badge-warning">dev.</span></a>
+              <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                  <a class="nav-link {{ Request::segment(1) == 'ibadah' && Request::segment(2) == 'umum'? 'active' : ''}}" href="{{url('/')}}/ibadah/umum">
+                  <i class="nav-icon fa fa-star"></i> Umum</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link {{ Request::segment(1) == 'ibadah' && Request::segment(2) == 'pa'? 'active' : ''}}" href="{{url('/')}}">
+                  <i class="nav-icon fa fa-star"></i> P.J.J
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link {{ Request::segment(1) == 'ibadah' && Request::segment(2) == 'pa'? 'active' : ''}}" href="{{url('/')}}">
+                  <i class="nav-icon fa fa-star"></i> P.A
                   </a>
                 </li>
               </ul>

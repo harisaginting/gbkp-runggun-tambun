@@ -232,8 +232,8 @@
       <section class="container-fluid pt-4" id="chart">
           <div class="row">
             <div class="col-md-10 offset-md-1 col-sm-12">
-                <div class="w-100 text-center">
-                    <span class="title-chart">Jumaat Per-Sektor</span>
+                <div class="w-100">
+                    <span class="title-chart">Jemaat Per-Sektor</span>
                 </div>
                 <div id="anggota-sektor-kategorial"></div>
             </div>

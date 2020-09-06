@@ -285,13 +285,12 @@
 @section('footer-js')  
 <script>
   const getChart1 = async() =>{
-          return await fetch("{{route('app-dashboard-chart-total-kategorial')}}", {
-            method      : 'POST', // *GET, POST, PUT, DELETE, etc.
-            mode        : 'cors', 
-            referrerPolicy: 'no-referrer'
+          return await fetch("{{route('frontend-chart-total-kategorial')}}", {
+            method      : 'GET',
           }).then(r => 
           r.json())
           .then(data => {
+            console.log(data);
             return data;
           })
             .catch(error => {
@@ -419,7 +418,7 @@
                $("#landing-loader").addClass("hidden");
                startChart1(data.data);           
             }else{
-                alert("terjadi kesalahan");
+                console.log("terjadi kesalahan");
             }
         });
   });

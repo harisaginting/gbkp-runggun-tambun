@@ -52,7 +52,7 @@
 
                                 <div class="col-sm-12 form-group">
                                     <label><strong>Deskripsi singkat</strong></label>
-                                    <textarea type="text" name="short_description" id="short_description" class="form-control" required>
+                                    <textarea type="text" name="short_description" id="short_description" class="form-control" required maxlength="300">
                                     </textarea>
                                 </div>
 

@@ -123,10 +123,6 @@
                     <div class="carousel-item active">
                       <img src="{{url('/public/img/banner-desktop-1.jpg')}}" class="d-none d-sm-block w-100 banner-desktop" alt="">
                       <img src="{{url('/public/img/banner-mobile-1.jpg')}}" class="mobile d-block d-sm-none w-100 banner-mobile" alt="">
-                      <!-- <div class="carousel-caption">
-                        <h5>Title Here</h5>
-                        <p>description here</p>
-                      </div> -->
                     </div>
                     <div class="carousel-item">
                       <img src="{{url('/public/img/banner-desktop-2.jpg')}}" class="d-none d-sm-block w-100 banner-desktop" alt="">
@@ -229,7 +225,7 @@
           </div>
       </section>
 
-      <section class="container-fluid pt-4" id="chart">
+      <!-- <section class="container-fluid pt-4" id="chart">
           <div class="row">
             <div class="col-md-10 offset-md-1 col-sm-12">
                 <div class="w-100">
@@ -238,7 +234,7 @@
                 <div id="anggota-sektor-kategorial"></div>
             </div>
           </div>
-      </section>
+      </section> -->
 
       <section class="container pl-2 pr-2"  id="berita">
         <div class="row">
@@ -410,16 +406,6 @@
         });
         $slider.find('.carousel-indicators li').click(e => {
           $slider.carousel($(e.target).data('slide-to'));
-        });   
-
-        getChart1().then((data)=>{
-            $("#landing-loader").removeClass("hidden");
-            if(data.status == 200){
-               $("#landing-loader").addClass("hidden");
-               startChart1(data.data);           
-            }else{
-                console.log("terjadi kesalahan");
-            }
         });
   });
 

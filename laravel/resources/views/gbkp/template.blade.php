@@ -146,8 +146,13 @@
                 <div class="col-lg-6 col-sm-12">
                       <ul class="contact mb-0 pl-0">
                         <li>
+                          <i class="fab fa-youtube"></i>
+                          <a target="_blank" href="https://www.instagram.com/gbkprungguntambun"><strong>gbkprungguntambun</strong></a>
+                        </li>
+                        <li>
                           <i class="fab fa-instagram"></i>
-                          <a target="_blank" href="https://www.instagram.com/gbkprungguntambun"><strong>gbkprungguntambun</strong></a></li>
+                          <a target="_blank" href="https://www.instagram.com/gbkprungguntambun"><strong>gbkprungguntambun</strong></a>
+                        </li>
                         <li class="mt-1"><strong>Alamat</strong> : Jl. Bumi Lestari Raya Blok H-11 No.1, Mangunjaya, Kec. Tambun Sel., Bekasi, Jawa Barat 17510</li>
                       </ul>
                 </div>

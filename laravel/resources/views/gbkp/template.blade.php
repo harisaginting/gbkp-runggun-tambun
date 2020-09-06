@@ -43,6 +43,7 @@
     <!-- Icon -->
     <link rel="icon" href="{{url('public/img/logo32x32.png')}}" sizes="32x32" />
     <link rel="stylesheet" href="{{url('vendor/fontawesome-all.min.css')}}" />
+    @yield('asset')
     @yield('header-css')
 
     <!-- theme -->
@@ -104,12 +105,20 @@
           <div class="collapse navbar-collapse justify-content-end scroll" id="myNavbar">
             <ul class="nav navbar-nav ml-auto scroll">
               <li class="nav-item"><a href="{{url('/')}}" class="nav-link pl-10">Beranda</a></li>
-              <li class="nav-item"><a href="{{url('/artikel')}}" class="nav-link pl-10 scroll">Warta Jemaat</a></li>
               <li class="nav-item"><a href="#kategorial" class="nav-link pl-10 scroll">Koinonia</a></li>
               <li class="nav-item"><a href="#" class="nav-link pl-10">Marturia</a></li>
               <li class="nav-item"><a href="#" class="nav-link pl-10">Diakonia</a></li>
-              <li class="nav-item"><a href="{{url('/statistik')}}" class="nav-link pl-10">Statistik</a></li>
               <li class="nav-item"><a href="#" class="nav-link pl-10">PJJ Sektor</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Warta Jemaat
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{{url('/artikel')}}">Berita</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Momo</a>
+                </div>
+              </li>
               </ul>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">

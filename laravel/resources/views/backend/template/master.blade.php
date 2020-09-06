@@ -28,9 +28,44 @@
     </div>
         @include('backend.template.footer')
         <script type="text/javascript">
-          if (localStorage.getItem('_token') === "" || localStorage.getItem('_token') === null) {
-            window.location.href = "{{url('/login')}}";
-          }
+          var CheckAuth = function () {
+          validateToken = async(token) =>{
+                return await fetch(base_url+"/api/v1/validate-token/"+token, {
+                  method      : 'GET', // *GET, POST, PUT, DELETE, etc.
+                  mode        : 'cors', 
+                  referrerPolicy: 'no-referrer'
+                }).then(r => 
+                r.json())
+                .then(data => {
+                  return data;
+                })
+                  .catch(error => {
+                    console.error('Error:', error);
+                });
+             }
+            return {
+                init: function() { 
+                  if (localStorage.getItem('_token') === "" || localStorage.getItem('_token') === null) {
+                    window.location.href = "{{url('/login')}}";
+                  }else{
+                    let token = localStorage.getItem('_token');
+                    validateToken(token).then((data)=>{
+                      $("#loader").addClass("hidden");
+                        if(data.status !== 200){
+                          window.location.href = "{{url('/login')}}";
+                        }else{
+                           console.log("token valid");
+                        }
+                    });  
+                  }
+                }
+            };
+
+        }();
+
+        jQuery(document).ready(function() {
+            CheckAuth.init();
+        });  
         </script>
   </body>
 </html>

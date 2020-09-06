@@ -257,7 +257,7 @@ a {
   margin-top: 10px;
 }
 
-.title-kategorial, .title-berita {
+.title-kategorial, .title-berita, .title-chart {
     font-size: 2em;
     font-weight: 600;
     font-family: Montserrat, sans-serif;

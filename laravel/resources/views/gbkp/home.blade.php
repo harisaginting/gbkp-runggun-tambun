@@ -1,5 +1,16 @@
 @extends('gbkp.template')
 
+@section('asset')
+  <script src="{{url('public/assets/plugin/highchart/code/highcharts.js')}}"></script>
+  <script src="{{url('public/assets/plugin/highchart/code/modules/drilldown.js')}}"></script>
+  <script src="{{url('public/assets/plugin/highchart/code/modules/exporting.js')}}"></script>
+  <script src="{{url('public/assets/plugin/highchart/code/grouped-categories.js')}}"></script>
+  <script src="{{url('public/assets/plugin/highchart/code/highcharts-more.js')}}"></script>
+  <script src="{{url('public/assets/plugin/highchart/code/highcharts-3d.js')}}"></script>
+  <script src="{{url('public/assets/plugin/highchart/code/lib/canvg.js')}}"></script>
+  <script src="{{url('public/assets/plugin/highchart/code/lib/jspdf.js')}}"></script>
+  <script src="{{url('public/assets/plugin/highchart/code/lib/rgbcolor.js')}}"></script>
+@endsection
 @section('header-css')
 <style type="text/css">
   #slider {
@@ -29,6 +40,14 @@
 
   .container-img-kategorial{
     text-align: center;
+  }
+
+  .container-logo-kategorial{
+     border-bottom: 0px !important;
+  }
+
+  .container-logo-kategorial.active{
+     border-bottom: 2px solid var(--main-secondary-2) !important;
   }
 
   .line-kategorial{
@@ -164,7 +183,7 @@
             <div class="col-12 line-kategorial">
             </div>
           </div>
-          <div class="row pb-0 pt-3">
+          <div class="row pb-0 pt-3"  role="tablist">
               <div class="card border-0 col-md-2 col-4 offset-md-1 container-logo-kategorial pt-2">
                   <div class="container-img-kategorial">
                       <img src="{{url('/public/img/logo-mamre.png')}}" alt="logo mamre" class="img-kategorial" >
@@ -173,7 +192,7 @@
                     Mamre
                   </div>
               </div>
-              <div class="card border-0 col-md-2 col-4  container-logo-kategorial pt-2">
+              <div class="card border-0 col-md-2 col-4 container-logo-kategorial pt-2">
                   <div class="container-img-kategorial">
                       <img src="{{url('/public/img/logo-moria.png')}}" alt="logo moria" class="img-kategorial" >
                   </div>
@@ -210,6 +229,17 @@
           </div>
       </section>
 
+      <section class="container-fluid pt-4" id="chart">
+          <div class="row">
+            <div class="col-md-10 offset-md-1 col-sm-12">
+                <div class="w-100 text-center">
+                    <span class="title-chart">Jumaat Per-Sektor</span>
+                </div>
+                <div id="anggota-sektor-kategorial"></div>
+            </div>
+          </div>
+      </section>
+
       <section class="container pl-2 pr-2"  id="berita">
         <div class="row">
           <div class="col-md-12 col-12">
@@ -221,7 +251,9 @@
             <div class="card border mb-4">
               <div class="card-body card-body-berita">
                 <div class="w-100 mb-2">
+                  <a href="{{url('/').'/artikel/'.$value->url_key}}">
                     <strong class="content-berita-title">{{$value->title ? $value->title : ''}}</strong>
+                  </a>
                     <div class="float-right content-berita-date">{{$value->publish_at ? $value->publish_at : '' }}</div>
                 </div>
                 <div class="d-sm-inline-flex d-md-flex justify-content-sm-end justify-content-md-end  flex-sm-column flex-md-row float-left">
@@ -234,11 +266,9 @@
                 </div>
               </div>
 
-              @if($value->url_key)
               <div class="card-footer text-right pt-1  pb-1">
                 <a href="{{url('/').'/artikel/'.$value->url_key}}" class="btn btn-primary btn-sm">Lanjutkan</a>
               </div>
-              @endif
             </div>
             @endforeach
 
@@ -254,6 +284,108 @@
   
 @section('footer-js')  
 <script>
+  const getChart1 = async() =>{
+          return await fetch("{{route('app-dashboard-chart-total-kategorial')}}", {
+            method      : 'POST', // *GET, POST, PUT, DELETE, etc.
+            mode        : 'cors', 
+            referrerPolicy: 'no-referrer'
+          }).then(r => 
+          r.json())
+          .then(data => {
+            return data;
+          })
+            .catch(error => {
+              console.error('Error:', error);
+          });
+  } 
+
+  const startChart1 = async(data) =>{
+      for (var i =  0; i < data.chart.length; i++) {
+        switch(data.chart[i]["name"]) {
+       case "SAITUN":
+          data.chart[i]["color"] = "#242765";
+        break;
+       case "MAMRE":
+          data.chart[i]["color"] = "#e67635";
+        break;
+       case "MORIA":
+          data.chart[i]["color"] = "#147ae2";
+        break;
+       case "PERMATA":
+          data.chart[i]["color"] = "#353f87";
+          break;
+        case "KA/KR":
+          data.chart[i]["color"] = "#fbcc37";
+          break;
+        default:
+          data.chart[i]["color"] = "#e67635";
+      }
+
+        console.log(data.chart[i]["name"]);
+      }
+        Highcharts.chart('anggota-sektor-kategorial', {
+          chart: {
+              type: 'column',
+              backgroundColor: '#0000',
+              borderRadius: '10px',
+              height : '500px',
+              marginTop : 20
+          },
+          exporting: { enabled: false },
+          subtitle: {
+              text: ''
+          },
+          credits: { text: 'gbkprungguntambun', href : 'https://gbkprungguntambun.org'},
+          title: {
+              text: '',
+          },
+          xAxis: {
+              categories: data.list_sektor
+          },
+          yAxis: {
+              min: 0,
+              title: {
+                  text: 'Jemaat'
+              },
+              stackLabels: {
+                  enabled: true,
+                  style: {
+                      fontWeight: 'bold',
+                      color: ( // theme
+                          Highcharts.defaultOptions.title.style &&
+                          Highcharts.defaultOptions.title.style.color
+                      ) || 'gray'
+                  }
+              }
+          },
+          legend: {
+              align: 'right',
+              x: 0,
+              // verticalAlign: 'top',
+              // y: 100,
+              floating: false,
+              backgroundColor: '#ffffff92',
+              borderColor: '#CCC',
+              borderWidth: 1,
+              shadow: false
+          },
+          tooltip: {
+              headerFormat: '<b>{point.x}</b><br/>',
+              pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+          },
+          plotOptions: {
+              column: {
+                  stacking: 'normal',
+                  dataLabels: {
+                      enabled: true
+                  }
+              }
+          },
+          series: data.chart
+    });
+    }
+
+
   $(document).ready(function() {   
         var $slider = $('#carousel'),hammer = new Hammer($slider.get(0));
         $slider.find('img').each((index, elem) => {
@@ -279,7 +411,17 @@
         });
         $slider.find('.carousel-indicators li').click(e => {
           $slider.carousel($(e.target).data('slide-to'));
-        });     
+        });   
+
+        getChart1().then((data)=>{
+            $("#landing-loader").removeClass("hidden");
+            if(data.status == 200){
+               $("#landing-loader").addClass("hidden");
+               startChart1(data.data);           
+            }else{
+                alert("terjadi kesalahan");
+            }
+        });
   });
 
 </script>

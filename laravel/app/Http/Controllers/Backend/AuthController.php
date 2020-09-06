@@ -98,4 +98,14 @@ class AuthController extends Controller
 
     }
 
+    function validateToken($token){
+        $user   = Anggota::where('token' , strtolower($token))->where('role','1')->first();
+        if(!empty($token) && !empty($user)){
+            $user  = $user->toArray();
+            return Harisa::apiResponse(200, array('token'=> $token,'nama' => $user["username"]), 'token is valid');    
+        }else{
+            return Harisa::apiResponse(408, null, 'Unauthorized');
+        }
+    }
+
 }

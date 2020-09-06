@@ -35,7 +35,9 @@
             <div class="card border mb-4">
               <div class="card-body card-body-berita">
                 <div class="w-100 mb-2">
+                  <a href="{{url('/').'/artikel/'.$value->url_key}}">
                     <strong class="content-berita-title">{{$value->title ? $value->title : ''}}</strong>
+                  </a>
                     <div class="float-right content-berita-date">{{$value->publish_at ? $value->publish_at : '' }}</div>
                 </div>
                 <div class="d-sm-inline-flex d-md-flex justify-content-sm-end justify-content-md-end  flex-sm-column flex-md-row float-left">
@@ -48,11 +50,9 @@
                 </div>
               </div>
 
-              @if($value->url_key)
               <div class="card-footer text-right pt-1  pb-1">
                 <a href="{{url('/').'/artikel/'.$value->url_key}}" class="btn btn-primary btn-sm">Lanjutkan</a>
               </div>
-              @endif
             </div>
             @endforeach
         </div>

@@ -7,6 +7,7 @@ $(document).ready(function() {
 	  forceParse: false,
 	  autoclose: true
 	});
+    
     $('.date-picker-born').datepicker({
       format: "dd-mm-yyyy",
       defaultViewDate : '17-08-1945',
@@ -106,7 +107,6 @@ $(document).ready(function() {
     global.on("click","#btn-logout",()=>{
         localStorage.clear();
         sessionStorage.clear();
-        console.log("log out clicked");
-        location.reload();
+        window.location.href = base_url+"/login";
     });
 });  

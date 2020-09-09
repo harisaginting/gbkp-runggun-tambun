@@ -146,35 +146,7 @@
         </div>
       </section>
 
-      <section id="visimisi" class="container-fluid">
-          <div class="row">
-              <div class="card border-0 col-md-6 px-0 ">
-                <div class="w-100 bg-primary-1 px-3">
-                  <div class="title-visimisi color-secondary">Visi</div>
-                  <div class="content-visi">
-                    GBKP menjadi kawan sekerja Allah untuk menyatakan rahmat Allah kepada dunia. Dalam Bahasa Inggris: to be God’s fellow-workers to manifest God’s mercy to the world (1 Korintus 3:9 dan I Petrus 2:9-10). 
-                    <p>Dalam bahasa Karo diartikan sebagai <br><strong class="color-secondary">“GBKP aron Dibata guna jadi pasu-pasu man isi doni”.</strong></p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card border-0 col-md-6 px-0 ">
-                <div class="w-100 bg-secondary px-3">
-                  <div class="title-visimisi color-primary-1">Misi</div>
-                  <div class="content-misi">
-                    <ol>
-                      <li>Menumbuhkembangkan <strong class="color-primary-1">spiritualitas jemaat berbasis Alkitab</strong></li>
-                      <li>Menegakkan <strong class="color-primary-1">keadilan, perdamaian dan keutuhan ciptaan Allah</strong></li>
-                      <li>Memperkuat <strong class="color-primary-1">semangat gotong royong antar sesama jemaat dan masyarakat</strong></li>
-                      <li>Menggali dan menumbuhkembangkan potensi jemaat untuk <strong class="color-primary-1">bersekutu dan bersinergi</strong></li>
-                    </ol>
-                  </div>
-                </div>
-              </div>
-          </div>
-      </section>
-
-       <section id="kategorial" class="container-fluid pb-3">
+      <section id="kategorial" class="container-fluid pb-3">
           <div class="row">
             <div class="col-12 line-kategorial">
             </div>
@@ -225,7 +197,35 @@
           </div>
       </section>
 
-      <!-- <section class="container-fluid pt-4" id="chart">
+      <section id="visimisi" class="container-fluid">
+          <div class="row">
+              <div class="card border-0 col-md-6 px-0 ">
+                <div class="w-100 bg-primary-1 px-3">
+                  <div class="title-visimisi color-secondary">Visi</div>
+                  <div class="content-visi">
+                    GBKP menjadi kawan sekerja Allah untuk menyatakan rahmat Allah kepada dunia. Dalam Bahasa Inggris: to be God’s fellow-workers to manifest God’s mercy to the world (1 Korintus 3:9 dan I Petrus 2:9-10). 
+                    <p>Dalam bahasa Karo diartikan sebagai <br><strong class="color-secondary">“GBKP aron Dibata guna jadi pasu-pasu man isi doni”.</strong></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card border-0 col-md-6 px-0 ">
+                <div class="w-100 bg-secondary px-3">
+                  <div class="title-visimisi color-primary-1">Misi</div>
+                  <div class="content-misi">
+                    <ol>
+                      <li>Menumbuhkembangkan <strong class="color-primary-1">spiritualitas jemaat berbasis Alkitab</strong></li>
+                      <li>Menegakkan <strong class="color-primary-1">keadilan, perdamaian dan keutuhan ciptaan Allah</strong></li>
+                      <li>Memperkuat <strong class="color-primary-1">semangat gotong royong antar sesama jemaat dan masyarakat</strong></li>
+                      <li>Menggali dan menumbuhkembangkan potensi jemaat untuk <strong class="color-primary-1">bersekutu dan bersinergi</strong></li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </section>
+
+     <!--  <section class="container-fluid pt-4" id="chart">
           <div class="row">
             <div class="col-md-10 offset-md-1 col-sm-12">
                 <div class="w-100">
@@ -234,36 +234,123 @@
                 <div id="anggota-sektor-kategorial"></div>
             </div>
           </div>
-      </section> -->
+      </section>
+ -->
 
-      <section class="container pl-2 pr-2"  id="berita">
+       <section class="container-fluid pl-0 pr-0" id="ibadah">
+          <div class="row">
+            <div class="col-md-12 container-title-kebaktian">
+                <div class="w-100">
+                  <div class="pl-3 pt-2 pb-0">
+                    <h3 class="title-kebaktian">JADWAL KEBAKTIAN</h3>
+                    <h5 class="sub-title-kebaktian">GBKP RUNGGUN TAMBUN</h5>
+                  </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-8 col-sm-8">
+              <div class="container-fluid">
+                @foreach($ibadah as $k => $i)
+                  <div class="row content-kebaktian pb-2">
+                    <div class="col-sm-10 col-md-12">
+                        <div class="container-fluid pl-1 pr-1 sub-content-kebaktian bg-primary-1">
+                            <div class="row text-center">
+                                <div class="col-sm-12 mb-2">
+                                  <h5 class="content-kebaktian-title color-dark fw8">{{$i['nama']}}</h5>
+                                  <span class="content-kebaktian-subtitle">{{$i['tanggal_ibadah']}}</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Tema</div>
+                                <div class="col-sm-12 col-md-7 pl-5 color-secondary fw8">{{$i['tema']}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Invocatio</div>
+                                <div class="col-sm-12 col-md-7 pl-5 color-dark fw8 fw8">{{$i['invocatio']}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Ogen</div>
+                                <div class="col-sm-12 col-md-7 pl-5 color-secondary fw8">{{$i['ogen']}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Khotbah</div>
+                                <div class="col-sm-12 col-md-7 pl-5 color-dark fw8 fw8">{{$i['khotbah']}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Pengkotbah</div>
+                                <div class="col-sm-12 col-md-7 pl-5 color-secondary fw8">{{$i['pengkotbah']}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Liturgi</div>
+                                <div class="col-sm-12 col-md-7 pl-5 color-dark fw8 fw8">{{$i['liturgi']}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Siermomo</div>
+                                <div class="col-sm-12 col-md-7 pl-5 color-secondary fw8">{{$i['siermomo']}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Sinaruh</div>
+                                <div class="col-sm-12 col-md-7 pl-5 color-dark fw8 fw8">{{$i['sinaruh']}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Koordinator</div>
+                                <div class="col-sm-12 col-md-7 pl-5 color-secondary fw8">{{$i['koordinator']}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Organis</div>
+                                <div class="col-sm-12 col-md-7 pl-5 color-dark fw8 fw8">{{$i['organis']}}</div>
+                            </div>
+
+                            @foreach($i['songleader2'] as $x => $y)
+                              <div class="row">
+                                  <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins"><?= $x == 0 ? 'Song Leader ' : '' ?></div>
+                                  <div class="col-sm-12 col-md-7 pl-5 color-secondary fw6">{{$y}}</div>
+                              </div>
+                            @endforeach
+
+                        </div>
+                    </div>
+                  </div>
+                 @endforeach
+              </div>
+            </div>
+          </div>
+      </section>
+
+      <section class="container-fluid pl-2 pr-2"  id="berita">
         <div class="row">
-          <div class="col-md-12 col-12">
-            <div class="w-100 title-berita">
-              Warta Jemaat
+            <div class="col-md-12 text-right">
+                <div class="w-100">
+                  <div class="pl-4 pt-2 pb-1">
+                    <h3 class="title-berita">WARTA JEMAAT</h3>
+                  </div>
+                </div>
             </div>
 
             @foreach($artikel as $key => $value)
-            <div class="card border mb-4">
-              <div class="card-body card-body-berita">
-                <div class="w-100 mb-2">
-                  <a href="{{url('/').'/artikel/'.$value->url_key}}">
-                    <strong class="content-berita-title">{{$value->title ? $value->title : ''}}</strong>
-                  </a>
-                    <div class="float-right content-berita-date">{{$value->publish_at ? $value->publish_at : '' }}</div>
-                </div>
-                <div class="d-sm-inline-flex d-md-flex justify-content-sm-end justify-content-md-end  flex-sm-column flex-md-row float-left">
-                  <div class="text-center">
-                    <img width="200" src="{{$value->image_mobile ? url('/').'/public/img/artikel/'.$value->image_mobile : 'https://via.placeholder.com/300x300/000/808080'}}" class="rounded img-berita" alt="{{$value->title ? $value->title : ''}}">
+            <div class="col-md-8 offset-md-4 col-sm-12">
+              <div class="card card-berita mb-4">
+                <div class="card-body card-body-berita py-1">
+                  <div class="w-100 mb-2">
+                    <a href="{{url('/').'/artikel/'.$value->url_key}}">
+                      <strong class="content-berita-title">{{$value->title ? $value->title : ''}}</strong>
+                    </a>
+                      <div class="float-right content-berita-date">{{$value->publish_at ? $value->publish_at : '' }}</div>
                   </div>
-                  <div class="pl-3 content-berita-value">
-                      {{$value->short_description ? $value->short_description : '' }}
+                  <div class="d-sm-inline-flex d-md-flex justify-content-sm-end justify-content-md-end  flex-sm-column flex-md-row float-left">
+                    <div class="text-center">
+                      <img width="200" src="{{$value->image_mobile ? url('/').'/public/img/artikel/'.$value->image_mobile : 'https://via.placeholder.com/300x300/000/808080'}}" class="rounded img-berita" alt="{{$value->title ? $value->title : ''}}">
+                    </div>
+                    <div class="pl-3 content-berita-value">
+                        {{$value->short_description ? $value->short_description : '' }}
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="card-footer text-right pt-1  pb-1">
-                <a href="{{url('/').'/artikel/'.$value->url_key}}" class="btn btn-primary btn-sm">Lanjutkan</a>
+                <div class="card-footer text-right pt-1 bg-white pb-1">
+                  <a href="{{url('/').'/artikel/'.$value->url_key}}" class="btn btn-primary btn-sm">Lanjutkan</a>
+                </div>
               </div>
             </div>
             @endforeach
@@ -273,7 +360,6 @@
               <a href="#berita">Lihat berita lainnya >>> </a>
             </div>
             @endif
-          </div>
         </div>
       </section>
 @endsection

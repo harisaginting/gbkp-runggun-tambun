@@ -1,11 +1,6 @@
 :root {
-  --main-gold     : #894E00;
-  --main-white    : #fff;
-  --main-white-1  : #EFECEC;
-  --main-white-2  : #BCB9B9;
-  --main-dark     : #2C2929;
-  --main-dark-1   : #646161;
-  --main-dark-2   : #908E8E;
+  --main-gold     : #fac737;
+  --main-white    : #FFFBF7;
   --main-primary  : #e6750a;
   --main-primary-1: #FFB658;
   --main-primary-2: #894E00;
@@ -24,9 +19,6 @@
   --main-primary-4: #0E1655;*/
 }
 
-.color-dark { color: var(--main-dark) !important;}
-.color-white { color: var(--main-white) !important;}
-.color-white-1 { color: var(--main-white-1) !important;}
 .color-primary { color: var(--main-primary) !important;}
 .color-primary-1 { color: var(--main-primary-1) !important; }
 .color-primary-2 { color: var(--main-primary-2) !important;}
@@ -34,7 +26,6 @@
 .color-secondary-1 { color: var(--main-secondary-1) !important;}
 .color-secondary-2 { color: var(--main-secondary-2) !important;}
 
-.bg-white   { background-color: var(--main-white) !important;}
 .bg-primary   { background-color: var(--main-primary) !important;}
 .bg-primary-1   { background-color: var(--main-primary-1) !important;}
 .bg-primary-2   { background-color: var(--main-primary-2) !important;}
@@ -45,27 +36,7 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:200,700|Source+Sans+Pro:300,600,300italic,600italic");
 
 body{
-  background:  var(--main-white);
-}
-
-/* width */
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: var(--main-white);
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: var(--main-primary);
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: var(--main-secondary);
+  background:  var(--main-primary-3);
 }
 
 /*Navbar styling*/
@@ -76,15 +47,8 @@ body{
   height: 4.5em;
 }
 
-.poppins{
-  font-family: 'Poppins' !important;
-}
-
-.fw6{
-  font-weight: 600 !important;
-}
-.fw8{
-  font-weight: 800 !important;
+.navbar-expand-lg>.container, .navbar-expand-lg>.container-fluid{
+  background: var(--main-primary);
 }
 
 .navbar-light .navbar-toggler-icon{
@@ -92,16 +56,16 @@ body{
 }
 
 .navbar-light .navbar-nav .nav-link{
-  color: var(--main-secondary-2);
+  color: var(--main-white);
   font-family: Poppins, sans-serif;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .nav-link.active,
 .nav-link:hover,
 .nav-link:focus {
-  color: var(--main-white) !important;
+  color: #000 !important;
 }
 
 #navbar-bottom{
@@ -161,58 +125,10 @@ a {
 }
 
 
-.container-title-kebaktian{
-  background: linear-gradient(90deg, rgba(239,236,236,1) 44%, rgba(255,255,255,1) 93%);
-}
-
-.content-kebaktian{
-  background: linear-gradient(90deg, rgba(239,236,236,1) 44%, rgba(255,255,255,1) 93%);
-}
-
-.content-kebaktian-title{
-  color: var(--main-primary);
-  font-weight:600;
-}
-
-.content-kebaktian-subtitle{
-  color: var(--main-dark-1);
-  font-weight:600;
-  margin-top: -18px;
-}
-
-.title-kebaktian, .sub-title-kebaktian{
-  font-family: Poppins;
-}
-
-.title-kebaktian{
-  font-weight: 600;
-  color: var(--main-primary);
-}
-.sub-title-kebaktian{
-  margin-top: -15px;
-  padding-left: 2px;
-  letter-spacing: 0.07em;
-  color: var(--main-secondary);
-}
-
-.content-kebaktian-title{
-  margin-bottom: -2px;
-}
-
-.sub-content-kebaktian{
-    border: 1px solid #999999;
-    border-radius: 10px;
-    padding: 10px;
-}
-
-
-#berita{
-  background: linear-gradient(90deg,  rgba(255,255,255,1) 7%, rgba(239,236,236,1) 56%);
-}
-
-.card-berita{
-    border: 2px solid var(--main-secondary) !important;
-    border-radius: 10px;
+.carousel-caption {
+    /*position: absolute;
+    height: 50%;
+    top: 30%;*/
 }
 
 .card {
@@ -239,6 +155,7 @@ a {
 .content-berita-title{
   font-family: Poppins;
   font-weight: 600;
+  letter-spacing: 0.05em;
   font-size: 1.25em;
   color: var(--main-secondary-2) !important;
 }
@@ -253,6 +170,7 @@ a {
 .card-header{
   background-color: var(--main-secondary-2) !important;
   color : var(--main-white); 
+  font-family: Montserrat, sans-serif;
   border-top-left-radius: 10px !important;
   border-top-right-radius: 10px !important;
 }
@@ -325,7 +243,7 @@ a {
   margin-top: 5.6em;
 }
 
-#kategorial{
+#kategorial, #contact{
   background-color: var(--main-secondary-3);
 }
 
@@ -347,18 +265,18 @@ a {
 .title-kategorial, .title-berita, .title-chart {
     font-size: 2em;
     font-weight: 600;
-    font-family: Poppins, sans-serif;
-    color: var(--main-secondary);
+    font-family: Montserrat, sans-serif;
+    color: var(--main-primary-2);
     margin-bottom: -5px;
 }
 
 
 .title-contact{
+  letter-spacing: 0.08em;
   font-size: 1.2em;
   font-weight: 600;
   font-family: Poppins, sans-serif;
   color: var(--main-white);
-  background-color: var(--main-primary) !important;
 }
 
 
@@ -372,6 +290,7 @@ a {
 
 .footer{
   background-color: var(--main-primary);
+  color: var(--main-primary-2);
 }
 
 @media screen and (max-width: 580px) {

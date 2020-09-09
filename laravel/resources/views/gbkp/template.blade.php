@@ -5,9 +5,9 @@
     <title>{{$title ?? 'GBKP RUNGGUN TAMBUN'}}</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="keywords" content="GBKP, GBKP Runggun Tambun, GBKP Tambun, Greja Batak Karo Protestan, Permata GBKP, KA/KR GBKP, Karo, Kalak Karo, Kristen" />
     <meta name=”description” content="{{$description ??'GBKP Runggun Tambun - Gereja Batak Karo Protestan Runggun Tambun'}}">
     <meta name="google" content="notranslate" />
-    <meta name="google-site-verification" content="tW0WUpvfArHS_Vuvfmi0lCd59v4QOMco7yGOmqZwxkg" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
@@ -26,7 +26,6 @@
 
     <!-- Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat%3A400%2C600&#038;ver=0.1.19' type='text/css' media='all' />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap" type='text/css'  rel="stylesheet">
 
     <!-- Jquery -->
@@ -41,7 +40,6 @@
     <link rel="stylesheet" href="{{url('public/gbkp/landing.css?v=').date('s')}}" />
 
     <!-- Icon -->
-    <link rel="icon" href="{{url('public/img/logo32x32.png')}}" sizes="32x32" />
     <link rel="stylesheet" href="{{url('vendor/fontawesome-all.min.css')}}" />
     @yield('asset')
     @yield('header-css')
@@ -147,11 +145,12 @@
                       <ul class="contact mb-0 pl-0">
                         <li>
                           <i class="fab fa-youtube"></i>
-                          <a target="_blank" href="https://www.instagram.com/gbkprungguntambun"><strong>gbkprungguntambun</strong></a>
+                          <a target="_blank" href="https://www.youtube.com/channel/UCznOfeu35X5dxx1pbBw6hzw"><strong>GBKP Runggun Tambun</strong></a>
                         </li>
                         <li>
                           <i class="fab fa-instagram"></i>
-                          <a target="_blank" href="https://www.instagram.com/gbkprungguntambun"><strong>gbkprungguntambun</strong></a>
+                          <a target="_blank" href="https://www.instagram.com/gbkprungguntambun"><strong>
+                          &nbsp;gbkprungguntambun</strong></a>
                         </li>
                         <li class="mt-1"><strong>Alamat</strong> : Jl. Bumi Lestari Raya Blok H-11 No.1, Mangunjaya, Kec. Tambun Sel., Bekasi, Jawa Barat 17510</li>
                       </ul>

@@ -68,7 +68,7 @@ Route::group(['domain' => env('APP_URL')], function () {
 		    		Route::post('serayaan/save', 'JabatanAnggotaController@save')->name('app-serayaan-save');
 		    		Route::get('serayaan/list', 'JabatanAnggotaController@list')->name('app-data-serayaan');
 
-		    		Route::get('ibadah/umum/save', 'IbadahUmumController@list')->name('app-ibadah-umum-save');
+		    		Route::post('ibadah/umum/save', 'IbadahUmumController@save')->name('app-ibadah-umum-save');
     			});
 
     			// NO AUTH

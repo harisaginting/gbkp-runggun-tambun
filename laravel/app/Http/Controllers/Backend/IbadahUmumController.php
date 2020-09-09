@@ -42,48 +42,73 @@ class IbadahUmumController extends Controller
     public function save(){
         $postData   = $this->r->post(); 
         $data       = array();
-        foreach ($postData as $key => $value) {
-             $data[$value["name"]] = $value["value"];
-        } 
-        $model  = new JabatanAnggota;
-        $model->id_anggota          = !empty($data["anggota"]) ? $data["anggota"] : null;
-        $model->id_jabatan          = !empty($data["jabatan"]) ? $data["jabatan"] : null;
         
+        $songleaderArr   = array();
+        foreach ($postData as $key => $value) {
+             if ($value["name"] == "songleader[]" ) {
+                array_push($songleaderArr, $value["value"]);
+             }else{
+                $data[$value["name"]] = $value["value"];
+             }
+        } 
+        $songleader = json_encode($songleaderArr);
 
-        $periodStart = $periodEnd = null;
+        $persembahencount = 1;
+        $persembahen      = null;
+        $persembahenArr   = array();
+        foreach ($postData as $key => $value) {
+             if ($value["name"] == "persembahen[]" ) {
+                $persembahenArr["persembahen-".$persembahencount] = $value["value"];
+                $persembahencount++;
+             }else{
+                $data[$value["name"]] = $value["value"];
+             }
+        } 
+        $persembahen = json_encode($persembahenArr);
 
-        if (!empty($data["period_start"])) {
-            $rawDate        = explode("-", $data["period_start"]);
-            $periodStart    = $rawDate[2]."-".$rawDate[1]."-".$rawDate[0];
+        $tanggalIbadah = null;
+        if (!empty($data["tanggal"])){
+            $rawDate        = explode("-", $data["tanggal"]);
+            $tanggalIbadah  = $rawDate[2]."-".$rawDate[1]."-".$rawDate[0];
         }
-        if (!empty($data["period_end"])) {
-            $rawDateEnd     = explode("-", $data["period_end"]);
-            $periodEnd      = $rawDateEnd[2]."-".$rawDateEnd[1]."-".$rawDateEnd[0];
-        }
 
-        if (!empty($periodStart)) {
-            $model->period_start        = $periodStart;     
-        }
-
-        if (!empty($periodEnd)) {
-            $model->period_end          = $periodEnd; 
-        }
-
+        $model = new IbadahUmum;
+        $model->nama        = $data["nama"];
+        $model->tema        = $data["tema"];
+        $model->khotbah     = !empty($data["khotbah"]) ? $data["khotbah"] : null;
+        $model->invocatio   = !empty($data["invocatio"]) ? $data["invocatio"] : null;
+        $model->ogen        = !empty($data["ogen"]) ? $data["ogen"] : null;
+        $model->tanggal     = !empty($tanggalIbadah) ? $tanggalIbadah : null;
+        $model->waktu_mulai = !empty($data["waktu_mulai"]) ? $data["waktu_mulai"] : null;
+        $model->waktu_selesai = !empty($data["waktu_selesai"]) ? $data["waktu_selesai"] : null;
+        $model->pengkotbah  = !empty($data["pengkotbah"]) ? $data["pengkotbah"] : null;
+        $model->liturgi     = !empty($data["liturgi"]) ? $data["liturgi"] : null;
+        $model->koordinator = !empty($data["koordinator"]) ? $data["koordinator"] : null;
+        $model->simabaenden = !empty($data["simabaenden"]) ? $data["simabaenden"] : null;
+        $model->sinaruh     = !empty($data["sinaruh"]) ? $data["sinaruh"] : null;
+        $model->siermomo    = !empty($data["siermomo"]) ? $data["siermomo"] : null;
+        $model->songleader  = !empty($songleader) ? $songleader : null;
+        $model->persembahen = !empty($persembahen) ? $persembahen : null;
+        $model->organis     = !empty($data["organis"]) ? $data["organis"] : null;
+        $model->link_page   = !empty($data["link_page"]) ? $data["link_page"] : null;
+        $model->link_youtube = !empty($data["link_youtube"]) ? $data["link_youtube"] : null;
+        $model->sipulung    = !empty($data["sipulung"]) ? $data["sipulung"] : null;
+        $model->jumlah_persembahen = !empty($data["jumlah_persembahen"]) ? $data["jumlah_persembahen"] : null;
+        $model->updated_by  = $this->r->user["uuid"];
         $model->updated_at          = Carbon::now();
-        $model->updated_by          = $this->r->user["uuid"];      
 
-         if(!empty($data["id"])){
+         if(!empty($data["id_ibadah"])){
             $model->created_at          = Carbon::now();
-            $response =  $this->updateProcess($data["id"],$model);
+            $response                   =  $this->updateProcess($data["id_ibadah"],$model);
          }else{
             $model->save();
             $response = true;
          }
          if ($response){
-            if(!empty($data["id"])){
-                 return Harisa::apiResponse(200, JabatanAnggota::whereId($data["id"])->get(), 'success');
+            if(!empty($data["id_ibadah"])){
+                 return Harisa::apiResponse(200, IbadahUmum::whereIdIbadah($data["id_ibadah"])->get(), 'success');
              }else{
-                return Harisa::apiResponse(200, JabatanAnggota::whereId($model->id)->get(), 'success');
+                return Harisa::apiResponse(200, IbadahUmum::whereIdIbadah($model->id_ibadah)->get(), 'success');
              }
          }else{
             return Harisa::apiResponse(401, null, 'not valid request' );
@@ -94,8 +119,8 @@ class IbadahUmumController extends Controller
 
     private function updateProcess($id,$model){
         $modelRaw   = json_encode($model);
-        $data      = json_decode($modelRaw,true);
-        return JabatanAnggota::where('id',$id)->update($data);
+        $data       = json_decode($modelRaw,true);
+        return IbadahUmum::where('id_ibadah',$id)->update($data);
     }
 
 

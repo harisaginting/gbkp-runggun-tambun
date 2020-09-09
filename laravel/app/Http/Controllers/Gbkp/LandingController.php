@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Config;
 use App\Models\Artikel;
+use App\Models\IbadahUmum;
 use Session;
 use Harisa;
 use DB;
@@ -15,13 +16,37 @@ class LandingController extends Controller
 
     public function index()
     {	
+
+        $ibadahObj      = IbadahUmum::select("*", DB::raw("DATE_FORMAT(tanggal,'%d-%m-%Y') AS tanggal_ibadah "))->orderBy("tanggal","asc")->orderBy("waktu_mulai","asc")->limit(3)->get();
+
+        $ibadah = array();
+
+        foreach ($ibadahObj as $key => $value) {
+            // echo json_encode($value);die;
+            array_push($ibadah, json_decode(json_encode($value),true));
+        }
+
+        foreach ($ibadah as $key => $value) {
+            $ibadah[$key]["songleader2"] = array();
+            if(!empty($value["songleader"])){
+                $songleader = json_decode($value["songleader"],true);
+                if (is_array($songleader)) {
+                    $ibadah[$key]["songleader2"] = $songleader;
+                }
+                
+            }
+        }
+
+        // echo json_encode($ibadah[0]['songleader2']);die;
+        // echo json_encode($ibadah);die;
+
     	$artikel     = Artikel::select("*", DB::raw("DATE_FORMAT(updated_at,'%d-%m-%Y') AS publish_at "))->orderBy("updated_at","desc")->limit(3)->get();
     	$artikelmore = false;
     	if (count($artikel) > 5) {
     		$artikelmore = true;
     	}
-
-        return view('gbkp.home',compact('artikel','artikelmore'));
+        // echo json_encode($ibadah);die;
+        return view('gbkp.home',compact('artikel','artikelmore','ibadah'));
     }
 
     public function artikelList()

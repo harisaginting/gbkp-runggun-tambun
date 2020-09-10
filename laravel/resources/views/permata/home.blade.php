@@ -24,7 +24,7 @@
           <section id="wrapper">
               <section id="one" class="wrapper spotlight style1">
                 <div class="inner">
-                  <img class="image" src="{{url('/')}}/img/doa-resolusi-permata-gbkp.png" alt="misi permata gbkp runggun tambun" />
+                  <img class="image" src="{{url('/')}}/public/img/doa-resolusi-permata-gbkp.png" alt="misi permata gbkp runggun tambun" />
                   <div class="content">
                     <h2 class="content-header text-dark">VISI PERMATA GBKP</h2>
                     <div class="w-100 text-left"><p>“1 Korintus 3:9 dan 1 Petrus 2:9-10  : Menjadi kawan sekerja Allah untuk menyatakan rahmat Allah kepada dunia. Dalam Bahasa Inggris : to be God’s fellow-workers to manifest God’s mercy to the world, dan dalam Bahasa Karo diartikan sebagai Aron Dibata guna jadi pasu-pasu man isi doni.“</p></div>
@@ -35,7 +35,7 @@
             <!-- Two -->
               <section id="two" class="wrapper alt spotlight style2">
                 <div class="inner">
-                  <img class="image"  src="{{url('/')}}/img/pelantikan-pengurus-permata-2018-2020.png" alt="misi permata gbkp runggun tambun" />
+                  <img class="image"  src="{{url('/')}}/public/img/pelantikan-pengurus-permata-2018-2020.png" alt="misi permata gbkp runggun tambun" />
                   <div class="content">
                     <h2 class="content-header">MISI PERMATA GBKP</h2>
                     <ul>
@@ -52,7 +52,7 @@
             <!-- Three -->
               <section id="three" class="wrapper spotlight style3">
                 <div class="inner">
-                  <img class="image" src="{{url('/')}}/img/retreat-permata.png" alt="tentang permata gbkp runggun tambun" />
+                  <img class="image" src="{{url('/')}}/public/img/retreat-permata.png" alt="tentang permata gbkp runggun tambun" />
                   <div class="content">
                     <h2 class="major">TENTANG KAMI</h2>
                     <div class="w-100 text-left">

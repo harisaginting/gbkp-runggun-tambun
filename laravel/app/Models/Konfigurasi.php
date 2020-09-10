@@ -10,6 +10,22 @@ class Konfigurasi extends Model
     protected $guarded = [];
     protected $table = 'm_general';
 
+    public function getConfig($type , $name = null){
+        if(empty($name)){
+            return DB::table('m_general')->where('type',$type)->orderBy('value','asc')->get();    
+        }else{
+            $data = DB::table('m_general')->select('value')->where('type',$type)->orderBy('value','asc')->get();
+            
+            $result = array();
+            foreach ($data as $key => $value) {
+                array_push($result, $value->value);
+            }
+            return $result;
+
+        }
+        
+    }
+
     function get_datatable($length, $start, $searchValue, $orderColumn, $orderDir, $order,$status){
         $query      = DB::table($this->table);
                       // ->where('isAdmin',0);

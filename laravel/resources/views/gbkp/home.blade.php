@@ -185,7 +185,7 @@
                   </div>
               </div>
               <div class="card border-0 col-md-2 col-4 container-logo-kategorial pt-2">
-                  <a href="https://kitapermata.com" target="_blank" >
+                  <a href="{{env('APP_URL_FRONTEND_PERMATA')}}" target="_blank" >
                   <div class="container-img-kategorial" href="https://kitapermata.com" target="_blank">
                       <img src="{{url('/public/img/logo-permata.png')}}" class="img-kategorial" alt="logo permata">
                   </div>

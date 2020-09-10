@@ -14,7 +14,7 @@
         <!-- Banner -->
           <section id="banner">
             <div class="inner">
-              <div class="logo"><img src="{{url('public//img/logo_permata.png')}}" alt="LOGO PERMATA GBKP" height="100"></div>
+              <div class="logo"><img src="{{url('/public/img/logo-permata.png')}}" alt="LOGO PERMATA GBKP" height="100"></div>
               <h1>PERMATA GBKP RUNGGUN TAMBUN</h1>
               <p>Bersekutu Melayani Mewujudnyatakan Kehendak ALLAH Ditengah-tengah Gereja, Keluarga, Masyarakat, Bangsa dan Negara.</p>
             </div>

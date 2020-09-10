@@ -9,8 +9,14 @@ class Dashboard extends Model
 {
     protected $guarded = [];
 
-    function getAnggotaByStatus($sektor, $status){
-        return DB::table('anggota')->where('status',$status)->where('sektor',$sektor)->get();
+    function getAnggotaByStatus($sektor, $status, $kategorial = null){
+        $data =  DB::table('anggota')->where('status',$status)->where('sektor',$sektor);
+        
+        if (!empty($kategorial)) {
+            $data = $data->where("kategorial","=",$kategorial);
+        }
+
+        return $data->get();
     }
 
 

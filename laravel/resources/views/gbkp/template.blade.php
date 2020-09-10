@@ -5,7 +5,7 @@
     <title>{{$title ?? 'GBKP RUNGGUN TAMBUN'}}</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="keywords" content="GBKP, GBKP Runggun Tambun, GBKP Tambun, Greja Batak Karo Protestan, Permata GBKP, KA/KR GBKP, Karo, Kalak Karo, Kristen" />
+    <meta name="keywords" content="GBKP, Greja Batak Karo Protestan, GBKP Runggun Tambun, GBKP Tambun, GBKP Klasis Bekasi Denpasar, Permata GBKP, KA/KR GBKP, Mamre GBKP,  Moria GBKP Karo, Kalak Karo, Kristen" />
     <meta name=”description” content="{{$description ??'GBKP Runggun Tambun - Gereja Batak Karo Protestan Runggun Tambun'}}">
     <meta name="google" content="notranslate" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
@@ -37,7 +37,7 @@
     <script src="{{url('vendor/bootstrap.min.js')}}"></script>
 
     <!-- custom -->
-    <link rel="stylesheet" href="{{url('public/gbkp/landing.css?v=').date('s')}}" />
+    <link rel="stylesheet" href="{{url('public/gbkp/home.css?v=').date('s')}}" />
 
     <!-- Icon -->
     <link rel="stylesheet" href="{{url('vendor/fontawesome-all.min.css')}}" />
@@ -131,8 +131,8 @@
     </div>
 
      <section id="contact">
-        <div class="container pl-2 pr-2 pt-4 pb-5">
-        <div class="card ">
+        <div class="container-fluid pl-2 pr-2 pt-4 pb-2">
+        <div class="card border ">
           <div class="card-header text-center title-contact py-3">
              Hubungi Kami
           </div>

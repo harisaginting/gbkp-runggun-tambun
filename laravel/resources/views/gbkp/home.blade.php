@@ -121,14 +121,14 @@
                 <div class="carousel slide" id="carousel">
                   <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <img src="{{url('/public/img/banner-desktop-1.jpg')}}" class="d-none d-sm-block w-100 banner-desktop" alt="">
-                      <img src="{{url('/public/img/banner-mobile-1.jpg')}}" class="mobile d-block d-sm-none w-100 banner-mobile" alt="">
+                      <img src="{{url('/public/img/banner-1.jpg')}}" class="d-none d-sm-block w-100 banner-desktop" alt="">
+                      <img src="{{url('/public/img/banner-1-mobile.jpg')}}" class="mobile d-block d-sm-none w-100 banner-mobile" alt="">
                     </div>
                     <div class="carousel-item">
-                      <img src="{{url('/public/img/banner-desktop-2.jpg')}}" class="d-none d-sm-block w-100 banner-desktop" alt="">
-                      <img src="{{url('/public/img/banner-mobile-2.jpg')}}" class="mobile d-block d-sm-none w-100 banner-mobile" alt="">
-                      <div class="carousel-caption">
-                        <h5>Pendeta, Pertua & Diaken GBKP Runggun Tambun</h5>
+                      <img src="{{url('/public/img/banner-2.jpg')}}" class="d-none d-sm-block w-100 banner-desktop" alt="">
+                      <img src="{{url('/public/img/banner-2-mobile.jpg')}}" class="mobile d-block d-sm-none w-100 banner-mobile" alt="">
+                      <div class="carousel-caption carousel-caption-top">
+                        <h5>Serayaan GBKP Runggun Tambun</h5>
                         <p>2020</p>
                       </div>
                     </div>
@@ -237,11 +237,11 @@
       </section>
  -->
 
-       <section class="container-fluid pl-0 pr-0" id="ibadah">
+       <section class="container-fluid pl-0 pr-0 mt-3" id="ibadah">
           <div class="row">
-            <div class="col-md-12 container-title-kebaktian">
+            <div class="col-md-12 text-center">
                 <div class="w-100">
-                  <div class="pl-3 pt-2 pb-0">
+                  <div class="pt-2 pb-0">
                     <h3 class="title-kebaktian">JADWAL KEBAKTIAN</h3>
                     <h5 class="sub-title-kebaktian">GBKP RUNGGUN TAMBUN</h5>
                   </div>
@@ -249,15 +249,15 @@
             </div>
 
 
-            <div class="col-md-8 col-sm-8">
+            <div class="col-md-8 offset-md-2 col-sm-8">
               <div class="container-fluid">
                 @foreach($ibadah as $k => $i)
                   <div class="row content-kebaktian pb-2">
                     <div class="col-sm-10 col-md-12">
-                        <div class="container-fluid pl-1 pr-1 sub-content-kebaktian bg-primary-1">
+                        <div class="container-fluid pl-1 pr-1 sub-content-kebaktian bg-primary">
                             <div class="row text-center">
                                 <div class="col-sm-12 mb-2">
-                                  <h5 class="content-kebaktian-title color-dark fw8">{{$i['nama']}}</h5>
+                                  <h5 class="content-kebaktian-title fw8">{{$i['nama']}}</h5>
                                   <span class="content-kebaktian-subtitle">{{$i['tanggal_ibadah']}}</span>
                                 </div>
                             </div>
@@ -267,7 +267,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Invocatio</div>
-                                <div class="col-sm-12 col-md-7 pl-5 color-dark fw8 fw8">{{$i['invocatio']}}</div>
+                                <div class="col-sm-12 col-md-7 pl-5 color-white fw8 fw8">{{$i['invocatio']}}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Ogen</div>
@@ -275,7 +275,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Khotbah</div>
-                                <div class="col-sm-12 col-md-7 pl-5 color-dark fw8 fw8">{{$i['khotbah']}}</div>
+                                <div class="col-sm-12 col-md-7 pl-5 color-white fw8 fw8">{{$i['khotbah']}}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Pengkotbah</div>
@@ -283,7 +283,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Liturgi</div>
-                                <div class="col-sm-12 col-md-7 pl-5 color-dark fw8 fw8">{{$i['liturgi']}}</div>
+                                <div class="col-sm-12 col-md-7 pl-5 color-white fw8 fw8">{{$i['liturgi']}}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Siermomo</div>
@@ -291,7 +291,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Sinaruh</div>
-                                <div class="col-sm-12 col-md-7 pl-5 color-dark fw8 fw8">{{$i['sinaruh']}}</div>
+                                <div class="col-sm-12 col-md-7 pl-5 color-white fw8 fw8">{{$i['sinaruh']}}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Koordinator</div>
@@ -299,7 +299,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Organis</div>
-                                <div class="col-sm-12 col-md-7 pl-5 color-dark fw8 fw8">{{$i['organis']}}</div>
+                                <div class="col-sm-12 col-md-7 pl-5 color-white fw8 fw8">{{$i['organis']}}</div>
                             </div>
 
                             @foreach($i['songleader2'] as $x => $y)
@@ -308,6 +308,19 @@
                                   <div class="col-sm-12 col-md-7 pl-5 color-secondary fw6">{{$y}}</div>
                               </div>
                             @endforeach
+
+                            @if(!empty($i['link_youtube']))
+                              <div class="row">
+                                <div class="col-sm-12 col-md-8 offset-md-2 pt-3">
+                                    <iframe class="iframeibadah" style="max-width: 100%;width: 100%;" height="315" src="{{$i['link_youtube']}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                                 @if(!empty($i['link_page']))
+                                  <div class="col-sm-12 col-md-8 offset-md-2 text-center mt-0 pt-0 container-button-ibadah">
+                                    <a href="{{$i['link_page']}}" class="btn btn-primary" target="_blank">SUMBER</a>
+                                  </div>
+                                 @endif
+                              </div>
+                            @endif
 
                         </div>
                     </div>
@@ -320,16 +333,17 @@
 
       <section class="container-fluid pl-2 pr-2"  id="berita">
         <div class="row">
-            <div class="col-md-12 text-right">
+            <div class="col-md-12 text-center container-title-berita">
                 <div class="w-100">
-                  <div class="pl-4 pt-2 pb-1">
+                  <div class="pt-2 pb-1">
                     <h3 class="title-berita">WARTA JEMAAT</h3>
+                    <h5 class="sub-title-berita mb-0">GBKP RUNGGUN TAMBUN</h5>
                   </div>
                 </div>
             </div>
 
             @foreach($artikel as $key => $value)
-            <div class="col-md-8 offset-md-4 col-sm-12">
+            <div class="col-md-8 offset-md-2 col-sm-12">
               <div class="card card-berita mb-4">
                 <div class="card-body card-body-berita py-1">
                   <div class="w-100 mb-2">

@@ -17,7 +17,7 @@ class LandingController extends Controller
     public function index()
     {	
 
-        $ibadahObj      = IbadahUmum::select("*", DB::raw("DATE_FORMAT(tanggal,'%d-%m-%Y') AS tanggal_ibadah "))->orderBy("tanggal","asc")->orderBy("waktu_mulai","asc")->limit(3)->get();
+        $ibadahObj      = IbadahUmum::select("*", DB::raw("DATE_FORMAT(tanggal,'%d-%m-%Y') AS tanggal_ibadah "))->orderBy("tanggal","asc")->orderBy("waktu_mulai","asc")->limit(1)->get();
 
         $ibadah = array();
 
@@ -36,10 +36,6 @@ class LandingController extends Controller
                 
             }
         }
-
-        // echo json_encode($ibadah[0]['songleader2']);die;
-        // echo json_encode($ibadah);die;
-
     	$artikel     = Artikel::select("*", DB::raw("DATE_FORMAT(updated_at,'%d-%m-%Y') AS publish_at "))->orderBy("updated_at","desc")->limit(3)->get();
     	$artikelmore = false;
     	if (count($artikel) > 5) {
@@ -58,9 +54,10 @@ class LandingController extends Controller
 
     public function artikel($key = null)
     {	
-
+        $page  = 1;
+        $limit = 10;
     	if (empty($key)) {
-    		$artikel     = Artikel::select("*", DB::raw("DATE_FORMAT(updated_at,'%d-%m-%Y') AS publish_at "))->orderBy("updated_at","desc")->get();
+    		$artikel     = Artikel::select("*", DB::raw("DATE_FORMAT(updated_at,'%d-%m-%Y') AS publish_at "))->orderBy("updated_at","desc")->take($limit)->get();
     		return view('gbkp.artikel-list', compact('artikelList'));
     	}
 
@@ -69,7 +66,7 @@ class LandingController extends Controller
         if(!empty($artikel)){
              $artikel = $artikel->toArray();
         }else{
-            $artikelList     = Artikel::select("*", DB::raw("DATE_FORMAT(updated_at,'%d-%m-%Y') AS publish_at "))->orderBy("updated_at","desc")->get();
+            $artikelList     = Artikel::select("*", DB::raw("DATE_FORMAT(updated_at,'%d-%m-%Y') AS publish_at "))->orderBy("updated_at","desc")->take($limit)->get();
             return view('gbkp.artikel-list', compact('artikelList'));
         }
     	$title 			= !empty($artikel["title"]) ? $artikel["title"] : null;

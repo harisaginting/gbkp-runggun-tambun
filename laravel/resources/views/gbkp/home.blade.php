@@ -384,7 +384,7 @@
             @endforeach
 
             @if($artikelmore)
-            <div class="col-12 w-100 text-right mb-5" style="margin-top:-20px;">
+            <div class="col-12 w-100 text-right mb-5 pr-3" style="margin-top:-20px;">
               <a href="#berita">Lihat berita lainnya >>> </a>
             </div>
             @endif

@@ -36,7 +36,7 @@ class LandingController extends Controller
                 
             }
         }
-    	$artikel     = Artikel::select("*", DB::raw("DATE_FORMAT(updated_at,'%d-%m-%Y') AS publish_at "))->orderBy("updated_at","desc")->limit(3)->get();
+    	$artikel     = Artikel::select("*", DB::raw("DATE_FORMAT(updated_at,'%d-%m-%Y') AS publish_at "))->orderBy("updated_at","desc")->limit(6)->get();
     	$artikelmore = false;
     	if (count($artikel) > 1) {
     		$artikelmore = true;

@@ -253,7 +253,7 @@
               <div class="container-fluid">
                  <div class="row content-kebaktian pb-2">
                 @foreach($ibadah as $k => $i)
-                    <div class="col-md-6 col-sm-12">
+                    <div class="col-md-6 col-sm-12 mt-2">
                         <div class="container-fluid pl-1 pr-1 sub-content-kebaktian bg-primary">
                             <div class="row text-center">
                                 <div class="col-sm-12 mb-2">

@@ -203,7 +203,7 @@ a {
 }
 
 .card-berita{
-    border: 2px solid var(--main-secondary) !important;
+    border: 2px solid var(--main-secondary-3) !important;
     border-radius: 10px;
 }
 
@@ -216,6 +216,13 @@ a {
   background-color: var(--main-white) !important;
   color: black;
   font-family: Roboto;
+  max-height: 270px;
+  min-height: 270px;
+  overflow-y: scroll;
+}
+
+.card-body-berita::-webkit-scrollbar {
+  display: none !important;
 }
 
 .card-body-contact{
@@ -377,7 +384,7 @@ a {
     padding-top: 0.5rem !important
   }
 
-  .sub-content-kebaktian{
+  .iframeibadah{
     padding-left: 2em !important;
   }
 

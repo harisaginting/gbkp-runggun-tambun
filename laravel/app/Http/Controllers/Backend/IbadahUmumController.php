@@ -35,6 +35,11 @@ class IbadahUmumController extends Controller
         return view('backend.ibadah.umum.add');
     }
 
+    public function edit()
+    {   
+        return view('backend.ibadah.umum.edit');
+    }
+
     public function get($id){
         return Harisa::apiResponse(200, Jabatan::whereId($id)->first(), 'success');
     }
@@ -93,6 +98,7 @@ class IbadahUmumController extends Controller
         $model->link_page   = !empty($data["link_page"]) ? $data["link_page"] : null;
         $model->link_youtube = !empty($data["link_youtube"]) ? $data["link_youtube"] : null;
         $model->sipulung    = !empty($data["sipulung"]) ? $data["sipulung"] : null;
+        $model->keterangan  = !empty($data["keterangan"]) ? $data["keterangan"] : null;
         $model->jumlah_persembahen = !empty($data["jumlah_persembahen"]) ? $data["jumlah_persembahen"] : null;
         $model->updated_by  = $this->r->user["uuid"];
         $model->updated_at          = Carbon::now();
@@ -127,12 +133,12 @@ class IbadahUmumController extends Controller
     public function list(Request $request){
         $length         = $request->input('length');
         $start          = $request->input('start');
-        $searchValue    = !empty($_POST['search']['value']) ? trim(strtoupper($_POST['search']['value'])) : null;
+        $searchValue    = !empty($_GET['search']['value']) ? trim(strtoupper($_GET['search']['value'])) : null;
         $orderColumn    = $request->input('order')['0']['column'];
         $orderDir       = $request->input('order')['0']['dir'];
         $order          = $request->input('order');
 
-        $output         = $this->jabatanAnggota->get_datatable($length, $start, $searchValue, $orderColumn, $orderDir, $order);  
+        $output         = $this->ibadah->get_datatable($length, $start, $searchValue, $orderColumn, $orderDir, $order);  
         $output['draw'] = $request->input('draw');
 
         echo json_encode($output); 

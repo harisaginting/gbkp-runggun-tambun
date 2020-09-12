@@ -249,16 +249,16 @@
             </div>
 
 
-            <div class="col-md-8 offset-md-2 col-sm-8">
+            <div class="col-12">
               <div class="container-fluid">
+                 <div class="row content-kebaktian pb-2">
                 @foreach($ibadah as $k => $i)
-                  <div class="row content-kebaktian pb-2">
-                    <div class="col-sm-10 col-md-12">
+                    <div class="col-md-6 col-sm-12">
                         <div class="container-fluid pl-1 pr-1 sub-content-kebaktian bg-primary">
                             <div class="row text-center">
                                 <div class="col-sm-12 mb-2">
                                   <h5 class="content-kebaktian-title fw8">{{$i['nama']}}</h5>
-                                  <span class="content-kebaktian-subtitle">{{$i['tanggal_ibadah']}}</span>
+                                  <span class="content-kebaktian-subtitle">{{$i['tanggal_ibadah']}} - {{$i['waktu_mulai']}} s/d {{$i['waktu_selesai']}} </span>
                                 </div>
                             </div>
                             <div class="row">
@@ -281,51 +281,65 @@
                                 <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Pengkotbah</div>
                                 <div class="col-sm-12 col-md-7 pl-5 color-secondary fw8">{{$i['pengkotbah']}}</div>
                             </div>
-                            <div class="row">
-                                <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Liturgi</div>
-                                <div class="col-sm-12 col-md-7 pl-5 color-white fw8 fw8">{{$i['liturgi']}}</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Siermomo</div>
-                                <div class="col-sm-12 col-md-7 pl-5 color-secondary fw8">{{$i['siermomo']}}</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Sinaruh</div>
-                                <div class="col-sm-12 col-md-7 pl-5 color-white fw8 fw8">{{$i['sinaruh']}}</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Koordinator</div>
-                                <div class="col-sm-12 col-md-7 pl-5 color-secondary fw8">{{$i['koordinator']}}</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Organis</div>
-                                <div class="col-sm-12 col-md-7 pl-5 color-white fw8 fw8">{{$i['organis']}}</div>
-                            </div>
-
-                            @foreach($i['songleader2'] as $x => $y)
-                              <div class="row">
-                                  <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins"><?= $x == 0 ? 'Song Leader ' : '' ?></div>
-                                  <div class="col-sm-12 col-md-7 pl-5 color-secondary fw6">{{$y}}</div>
-                              </div>
-                            @endforeach
-
-                            @if(!empty($i['link_youtube']))
-                              <div class="row">
-                                <div class="col-sm-12 col-md-8 offset-md-2 pt-3">
-                                    <iframe class="iframeibadah" style="max-width: 100%;width: 100%;" height="315" src="{{$i['link_youtube']}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                </div>
-                                 @if(!empty($i['link_page']))
-                                  <div class="col-sm-12 col-md-8 offset-md-2 text-center mt-0 pt-0 container-button-ibadah">
-                                    <a href="{{$i['link_page']}}" class="btn btn-primary" target="_blank">SUMBER</a>
-                                  </div>
-                                 @endif
+                            @if(!empty($i['keterangan']))
+                               <div class="row">
+                                  <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Keterangan</div>
+                                  <div class="col-sm-12 col-md-7 pl-5 color-secondary fw8">{{$i['keterangan']}}</div>
                               </div>
                             @endif
+                            <div class="row">
+                                <div class="col-sm-12 col-md-10 offset-md-1 mt-1 text-right">
+                                  <button class="btn btn-primary " type="button" data-toggle="collapse" data-target="#collapseIbadah-{{$k}}" aria-expanded="false" aria-controls="collapseIbadah-{{$k}}">
+                                    <span class="color-white">Detail</span>
+                                  </button>
+                                </div>
+                            </div>
+                            <div class="collapse" id="collapseIbadah-{{$k}}">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Liturgi</div>
+                                    <div class="col-sm-12 col-md-7 pl-5 color-white fw8 fw8">{{$i['liturgi']}}</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Siermomo</div>
+                                    <div class="col-sm-12 col-md-7 pl-5 color-secondary fw8">{{$i['siermomo']}}</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Sinaruh</div>
+                                    <div class="col-sm-12 col-md-7 pl-5 color-white fw8 fw8">{{$i['sinaruh']}}</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Koordinator</div>
+                                    <div class="col-sm-12 col-md-7 pl-5 color-secondary fw8">{{$i['koordinator']}}</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Organis</div>
+                                    <div class="col-sm-12 col-md-7 pl-5 color-white fw8 fw8">{{$i['organis']}}</div>
+                                </div>
 
+                                @foreach($i['songleader2'] as $x => $y)
+                                  <div class="row">
+                                      <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins"><?= $x == 0 ? 'Song Leader ' : '' ?></div>
+                                      <div class="col-sm-12 col-md-7 pl-5 color-secondary fw6">{{$y}}</div>
+                                  </div>
+                                @endforeach
+
+                                @if(!empty($i['link_youtube']))
+                                  <div class="row">
+                                    <div class="col-sm-12 col-md-8 offset-md-2 pt-3">
+                                        <iframe class="iframeibadah" style="max-width: 100%;width: 100%;" height="315" src="{{$i['link_youtube']}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                     @if(!empty($i['link_page']))
+                                      <div class="col-sm-12 col-md-8 offset-md-2 text-center mt-0 pt-0 container-button-ibadah">
+                                        <a href="{{$i['link_page']}}" class="btn btn-primary" target="_blank">SUMBER</a>
+                                      </div>
+                                     @endif
+                                  </div>
+                                @endif
+                            </div>
                         </div>
                     </div>
-                  </div>
                  @endforeach
+                 </div>
               </div>
             </div>
           </div>
@@ -343,7 +357,7 @@
             </div>
 
             @foreach($artikel as $key => $value)
-            <div class="col-md-8 offset-md-2 col-sm-12">
+            <div class="col-md-6 col-sm-12">
               <div class="card card-berita mb-4">
                 <div class="card-body card-body-berita py-1">
                   <div class="w-100 mb-2">
@@ -369,7 +383,7 @@
             </div>
             @endforeach
 
-            @if($artikelmore))
+            @if($artikelmore)
             <div class="col-12 w-100 text-right mb-5" style="margin-top:-20px;">
               <a href="#berita">Lihat berita lainnya >>> </a>
             </div>

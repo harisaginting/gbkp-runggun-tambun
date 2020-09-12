@@ -91,8 +91,8 @@
         <span class="loader-page-text">Timai kentisik ya...</span>
     </div>
     <body class="is-preload">
-    <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="navbar-top">
-        <div class="container-fluid">
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top px-0" id="navbar-top">
+        <div class="container-fluid bg-primary">
           <a class="navbar-brand ml-3" href="{{url('/')}}" style="display: flex;">
             <img src="{{url('/public/img/logo-gbkp.png')}}" width="80" height="80" class="d-inline-block align-top" alt="logo gbkp">
             <div class="ml-2" style="margin-top: 1px;">

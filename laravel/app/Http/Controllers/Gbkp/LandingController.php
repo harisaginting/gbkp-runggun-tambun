@@ -17,7 +17,7 @@ class LandingController extends Controller
     public function index()
     {	
 
-        $ibadahObj      = IbadahUmum::select("*", DB::raw("DATE_FORMAT(tanggal,'%d-%m-%Y') AS tanggal_ibadah "))->orderBy("tanggal","asc")->orderBy("waktu_mulai","asc")->limit(1)->get();
+        $ibadahObj      = IbadahUmum::select("*", DB::raw("DATE_FORMAT(tanggal,'%d-%m-%Y') AS tanggal_ibadah "))->orderBy("tanggal","asc")->orderBy("waktu_mulai","asc")->limit(2)->get();
 
         $ibadah = array();
 
@@ -38,7 +38,7 @@ class LandingController extends Controller
         }
     	$artikel     = Artikel::select("*", DB::raw("DATE_FORMAT(updated_at,'%d-%m-%Y') AS publish_at "))->orderBy("updated_at","desc")->limit(3)->get();
     	$artikelmore = false;
-    	if (count($artikel) > 5) {
+    	if (count($artikel) > 1) {
     		$artikelmore = true;
     	}
         // echo json_encode($ibadah);die;

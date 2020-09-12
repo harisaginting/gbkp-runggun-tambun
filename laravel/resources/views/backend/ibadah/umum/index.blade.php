@@ -79,50 +79,31 @@
                     serverSide: true,
                     dom: '<f<t>ip>',
                     ajax: { 
-                        url  :"{{route('app-data-serayaan')}}",  
+                        url  :"{{route('app-data-ibadah-umum')}}",  
                         type :'GET',
                          beforeSend: function (xhr) {
                                     xhr.setRequestHeader('Authorization', 'Bearer '+customer_token);
-                        },
-                    data : {
-                                kategorial : $('#kategorial').val(),
-                                sektor : $('#sektor').val(), 
-                                status : $('#status').val(),
-                                marga : $('#marga').val()
-                            },
-                        },
+                        }
+                    },   
                     aoColumns: [
                         {
                             mRender : function(data,type,obj){
-                                return obj.jabatan_name;
+                                return obj.tanggal_ibadah;
                             }
                         },
                         {
                             mRender : function(data,type,obj){
-                                let nama = obj.nama_panggilan;
-                                if (nama === null || nama === "null" || nama === "") {
-                                  nama = obj.nama_depan + " " + obj.nama_belakang
-                                }
-                                return obj.jabatan_title+" "+nama;
+                                return obj.waktu_mulai+" s/d "+obj.waktu_selesai;
                             }
                         },
                         {
                             mRender : function(data,type,obj){
-                                return "<strong>"+obj.start_date +"</strong> &nbsp;&nbsp;sampai&nbsp;&nbsp; <strong>"+obj.end_date+"</strong>";
+                                return obj.pengkotbah;
                             }
                         },
                         {
                             mRender : function(data,type,obj){
-                              let status = "<i class='fa fa-circle text-danger'></i>";
-                                if (obj.status === 1 || obj.status === "1") {
-                                  status = "<i class='fa fa-circle text-success'></i>";
-                                }
-                                return "<div class='w-100 text-center'>"+status+"</div>";
-                            }
-                        },
-                        {
-                            mRender : function(data,type,obj){
-                                return "<div style='margin-left:5px;' class='btn btn-warning btn-sm btn-edit' data-id='"+obj.id+"' ><i data-id='"+obj.id+"' class='fa fa-edit'></i></div>"
+                                return "<a style='margin-left:5px;' class='btn btn-warning btn-sm btn-edit' data-id='"+obj.id_ibadah+"' href='{{url('/').'/ibadah/umum/edit/'}}"+obj.id_ibadah+"' ><i data-id='"+obj.id_ibadah+"' class='fa fa-edit'></i></a>"
                             }
                         },
 

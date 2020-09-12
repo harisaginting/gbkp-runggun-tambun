@@ -32,6 +32,7 @@ Route::group(['domain' => env('APP_URL')], function () {
 
     	Route::get('/ibadah/umum', 'IbadahUmumController@index')->name('app-ibadah-umum');
     	Route::get('/ibadah/umum/add', 'IbadahUmumController@add')->name('app-ibadah-umum-add');
+    	Route::get('/ibadah/umum/edit/{id}', 'IbadahUmumController@add')->name('app-ibadah-umum-edit');
 
 
     	// migrasi
@@ -69,6 +70,7 @@ Route::group(['domain' => env('APP_URL')], function () {
 		    		Route::get('serayaan/list', 'JabatanAnggotaController@list')->name('app-data-serayaan');
 
 		    		Route::post('ibadah/umum/save', 'IbadahUmumController@save')->name('app-ibadah-umum-save');
+		    		Route::get('ibadah/umum/list', 'IbadahUmumController@list')->name('app-data-ibadah-umum');
     			});
 
     			// NO AUTH

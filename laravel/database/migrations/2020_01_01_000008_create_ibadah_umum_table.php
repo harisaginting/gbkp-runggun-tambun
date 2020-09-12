@@ -32,6 +32,7 @@ class CreateIbadahUmumTable extends Migration
             $table->string('organis')->nullable();
             $table->string('songleader')->nullable();
             $table->string('persembahen')->nullable();
+            $table->string('keterangan')->nullable();
             $table->string('link_page')->nullable();
             $table->string('link_youtube')->nullable();
             $table->integer('sipulung')->nullable();

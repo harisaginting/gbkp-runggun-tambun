@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta name="keywords" content="GBKP, Greja Batak Karo Protestan, GBKP Runggun Tambun, GBKP Tambun, GBKP Klasis Bekasi Denpasar, Permata GBKP, KA/KR GBKP, Mamre GBKP,  Moria GBKP Karo, Kalak Karo, Kristen" />
-    <meta name=”description” content="{{$description ??'GBKP Runggun Tambun - Gereja Batak Karo Protestan Runggun Tambun'}}">
+    <meta name=”description” content="{{$description ??'GBKP, Greja Batak Karo Protestan, GBKP Runggun Tambun, GBKP Tambun, GBKP Klasis Bekasi Denpasar, Permata GBKP, KA/KR GBKP, Mamre GBKP,  Moria GBKP Karo, Kalak Karo, Kristen'}}">
     <meta name="google" content="notranslate" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -115,6 +115,15 @@
                   <a class="dropdown-item" href="{{url('/artikel')}}">Berita</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#">Momo</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Organisasi
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{{url('/sejarah-gbkp')}}">Sejarah</a>
+                  <a class="dropdown-item" href="#">Statstik</a>
                 </div>
               </li>
               </ul>

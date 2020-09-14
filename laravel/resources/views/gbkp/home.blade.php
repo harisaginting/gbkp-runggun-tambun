@@ -237,13 +237,13 @@
       </section>
  -->
 
-       <section class="container-fluid pl-0 pr-0 mt-3" id="ibadah">
+       <section class="container-fluid pl-0 pr-0" id="ibadah">
           <div class="row">
-            <div class="col-md-12 text-center">
+            <div class="col-md-12 container-title-ibadah">
                 <div class="w-100">
-                  <div class="pt-2 pb-0">
-                    <h3 class="title-kebaktian">JADWAL KEBAKTIAN</h3>
-                    <h5 class="sub-title-kebaktian">GBKP RUNGGUN TAMBUN</h5>
+                  <div class="pt-3 pl-3">
+                    <h1 class="title-kebaktian">JADWAL KEBAKTIAN</h1>
+                    <h2 class="sub-title-kebaktian">GBKP RUNGGUN TAMBUN</h2>
                   </div>
                 </div>
             </div>
@@ -253,7 +253,7 @@
               <div class="container-fluid">
                  <div class="row content-kebaktian pb-2">
                 @foreach($ibadah as $k => $i)
-                    <div class="col-md-6 col-sm-12 mt-2">
+                    <div class="col-md-6 col-sm-12 mb-2">
                         <div class="container-fluid pl-1 pr-1 sub-content-kebaktian bg-primary">
                             <div class="row text-center">
                                 <div class="col-sm-12 mb-2">
@@ -345,49 +345,56 @@
           </div>
       </section>
 
-      <section class="container-fluid pl-2 pr-2"  id="berita">
+      <section class="container-fluid pl-0 pr-0 pt-0"  id="berita">
         <div class="row">
-            <div class="col-md-12 text-center container-title-berita">
+            <div class="col-md-12 container-title-berita">
                 <div class="w-100">
-                  <div class="pt-2 pb-1">
-                    <h3 class="title-berita">WARTA JEMAAT</h3>
-                    <h5 class="sub-title-berita mb-0">GBKP RUNGGUN TAMBUN</h5>
+                  <div class="pt-3 pl-3">
+                    <h1 class="title-berita">WARTA JEMAAT</h1>
+                    <h2 class="sub-title-berita">GBKP RUNGGUN TAMBUN</h2>
                   </div>
                 </div>
             </div>
 
-            @foreach($artikel as $key => $value)
-            <div class="col-md-6 col-sm-12">
-              <div class="card card-berita mb-4">
-                <div class="card-body card-body-berita py-1">
-                  <div class="w-100 mb-2">
-                    <a href="{{url('/').'/artikel/'.$value->url_key}}">
-                      <strong class="content-berita-title">{{$value->title ? $value->title : ''}}</strong>
-                    </a>
-                      <div class="float-right content-berita-date">{{$value->publish_at ? $value->publish_at : '' }}</div>
-                  </div>
-                  <div class="d-sm-inline-flex d-md-flex justify-content-sm-end justify-content-md-end  flex-sm-column flex-md-row float-left">
-                    <div class="text-center">
-                      <img width="200" src="{{$value->image_mobile ? url('/').'/public/img/artikel/'.$value->image_mobile : 'https://via.placeholder.com/300x300/000/808080'}}" class="rounded img-berita" alt="{{$value->title ? $value->title : ''}}">
+            <div class="col-12">
+                <div class="container-fluid">
+                 <div class="row">
+                  @foreach($artikel as $key => $value)
+                  <div class="col-md-6 col-sm-12">
+                    <div class="card card-berita mb-4">
+                      <div class="card-body card-body-berita py-1">
+                        <div class="w-100 mb-2">
+                          <div class="content-berita-date">{{$value->publish_at ? $value->publish_at : '' }}</div>
+                          <a href="{{url('/').'/artikel/'.$value->url_key}}">
+                            <div class="content-berita-title">{{$value->title ? $value->title : ''}}</div>
+                          </a>
+                        </div>
+                        <div class="d-sm-inline-flex d-md-flex justify-content-sm-end justify-content-md-end  flex-sm-column flex-md-row float-left">
+                          <div class="text-center">
+                            <img width="200" src="{{$value->image_mobile ? url('/').'/public/img/artikel/'.$value->image_mobile : 'https://via.placeholder.com/300x300/000/808080'}}" class="rounded img-berita" alt="{{$value->title ? $value->title : ''}}">
+                          </div>
+                          <div class="pl-3 content-berita-value">
+                              {{$value->short_description ? $value->short_description : '' }}
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card-footer text-right pt-1 bg-white pb-1">
+                        <a href="{{url('/').'/artikel/'.$value->url_key}}" class="btn btn-primary btn-sm"><span>Lanjutkan</span></a>
+                      </div>
                     </div>
-                    <div class="pl-3 content-berita-value">
-                        {{$value->short_description ? $value->short_description : '' }}
-                    </div>
                   </div>
+                  @endforeach
+                  </div>
+                   @if($artikelmore)
+                    <div class="row">
+                        <div class="col-md-12 w-100 text-right mb-5 pr-3" style="margin-top:-20px;">
+                          <a href="#berita">Lihat berita lainnya >>> </a>
+                        </div>
+                    </div>
+                    @endif
                 </div>
-
-                <div class="card-footer text-right pt-1 bg-white pb-1">
-                  <a href="{{url('/').'/artikel/'.$value->url_key}}" class="btn btn-primary btn-sm">Lanjutkan</a>
-                </div>
-              </div>
             </div>
-            @endforeach
-
-            @if($artikelmore)
-            <div class="col-12 w-100 text-right mb-5 pr-3" style="margin-top:-20px;">
-              <a href="#berita">Lihat berita lainnya >>> </a>
-            </div>
-            @endif
         </div>
       </section>
 @endsection

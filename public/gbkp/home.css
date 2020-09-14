@@ -178,6 +178,7 @@ a {
 
 .title-kebaktian, .sub-title-kebaktian, .sub-title-berita, .title-berita{
   font-family: Poppins;
+  font-size: 1.25em;
 }
 
 .title-kebaktian{
@@ -216,8 +217,13 @@ a {
   background-color: var(--main-white) !important;
   color: black;
   font-family: Roboto;
-  max-height: 270px;
-  min-height: 270px;
+  max-height: 300px;
+  min-height: 300px;
+}
+
+.content-berita-value{
+  max-height: 220px;
+  min-height: 220px;
   overflow-y: scroll;
 }
 
@@ -239,14 +245,15 @@ a {
   font-family: Poppins;
   font-weight: 600;
   font-size: 1.25em;
-  color: var(--main-secondary-2) !important;
+  line-height: 1.1em;
+  color: var(--main-dark) !important;
 }
 
 .content-berita-date{
   font-family: Poppins;
   font-weight: 600;
   font-size: 0.7em;
-  color: var(--main-primary-1);
+  color: var(--main-dark-2);
 }
 
 .card-header{
@@ -379,7 +386,15 @@ a {
 }
 
 @media screen and (max-width: 580px) {
+  .card-body-berita{
+    max-height: 400px;
+    min-height: 400px;
+  }
+
   .content-berita-value{
+    max-height: 80px;
+    min-height: 80px;
+    overflow-y: scroll;
     padding-left: 0px !important;
     padding-top: 0.5rem !important
   }

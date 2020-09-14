@@ -5,6 +5,9 @@ Route::group(['domain' => env('APP_URL_FRONTEND')], function () {
   		 Route::get('/artikel/', 'LandingController@artikelList')->name('artikel-list');
   		 Route::get('/artikel/{url_key}', 'LandingController@artikel')->name('artikel');
 
+
+  		 Route::get('/sejarah-gbkp/', 'LandingController@sejarah')->name('sejarah');
+
   		 Route::post('dashboard/chart-total-kategorial', 'DashboardController@chartTotalKategorial')->name('frontend-chart-total-kategorial');
 	});
 

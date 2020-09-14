@@ -75,5 +75,15 @@ class LandingController extends Controller
         return view('gbkp.artikel',compact('artikel','title','description'));
     }
 
+##ORGANISASI
+    public function sejarah()
+    {
+        $title          = 'Sejarah GBKP';
+        $description    = 'Sejarah Greja Batak Karo Protestan, Sejarah GBKP, GBKP Adalah';
+        return view('gbkp.sejarah', compact('title','description'));
+    }
+##END OF ORGANISASI
+
+
 }
  

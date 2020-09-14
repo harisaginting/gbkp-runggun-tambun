@@ -52,7 +52,7 @@ class AuthController extends Controller
                 $updatedToken   = Anggota::where('email', $user->email)->update(['token' => $token ]);
 
                 if($user->role == 0 ){
-                    if($user->status == "TERDAFTAR"){
+                    if(!empty($user->confimation)){
                         return Harisa::apiResponse(401, null, 'not activated');    
                     }
                 }

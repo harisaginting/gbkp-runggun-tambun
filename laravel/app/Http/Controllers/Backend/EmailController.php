@@ -45,16 +45,14 @@ class EmailController extends Controller
         foreach ($user as $key => $value) {
              $model     = new Anggota();
              $data      = $model->getAnggota($value["email"]);
-              echo  json_encode($data);die;
+              // echo  json_encode($data);die;
              // return view('email.birthday',compact('data'));
-
              $dataArr   = json_decode(json_encode($data),true); 
              Mail::send('email.birthday', $dataArr, function($message) use ($data){     
                 $message->to($data->email, $data->nama_depan)->subject("Selamat Ulang Tahun ".$data->nama_depan);
                 $message->cc(array('gbkp.tambun@gmail.com','harisaginting@gmail.com','nellaaginta@gmail.com','mikhatarigan28@gmail.com'));
                 $message->from('gbkprungguntambun@gmail.com','GBKP RUNGGUN TAMBUN');
             });
-             die;
         }
 
         echo "success";

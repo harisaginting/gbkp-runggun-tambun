@@ -10,6 +10,7 @@ use Harisa;
 use Session;
 
 
+
 class EmailController extends Controller
 {
 
@@ -20,6 +21,60 @@ class EmailController extends Controller
         $marga      = Harisa::get_marga();
         return view('email.index',compact('sektor','marga','pekerjaan'));
     }
+
+
+    public function test()
+    {   
+        $data = array();
+        Mail::send('email.test', array(), function($message) use ($data){     
+                $message->to('harisaginting@gmail.com', 'harisaaa')->subject("TEST EMAIL ");
+                $message->cc(array('harisaginting@gmail.com'));
+                $message->from('gbkprungguntambun@gmail.com','GBKP RUNGGUN TAMBUN');
+            });
+
+        echo "success";
+    }
+
+
+    public function sendEmailBirthday()
+    {   
+        $user       = Anggota::whereNotNull("email")->whereNotNull("tanggal_lahir")->whereRaw("MONTH(tanggal_lahir) = ".date('m'))->whereRaw("DAY(tanggal_lahir) = ".date('d'))->get()->toArray();
+        // echo date_default_timezone_get(); die;
+        // echo date("H:i:s")." bulan : ".date("m")." tanggal".date('d');die;
+        // echo json_encode($user);die;
+        foreach ($user as $key => $value) {
+             $model     = new Anggota();
+             $data      = $model->getAnggota($value["email"]);
+              echo  json_encode($data);die;
+             // return view('email.birthday',compact('data'));
+
+             $dataArr   = json_decode(json_encode($data),true); 
+             Mail::send('email.birthday', $dataArr, function($message) use ($data){     
+                $message->to($data->email, $data->nama_depan)->subject("Selamat Ulang Tahun ".$data->nama_depan);
+                $message->cc(array('gbkp.tambun@gmail.com','harisaginting@gmail.com','nellaaginta@gmail.com','mikhatarigan28@gmail.com'));
+                $message->from('gbkprungguntambun@gmail.com','GBKP RUNGGUN TAMBUN');
+            });
+             die;
+        }
+
+        echo "success";
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public function sendEmailBroadcast(Request $r)
     {   
@@ -54,25 +109,6 @@ class EmailController extends Controller
              Mail::send('email.selamat-hari-minggu', $dataArr, function($message) use ($data){     
                 $message->to($data->email, $data->nama_depan)->subject("SELAMAT HARI MINGGU ".$data->nama_depan." :) ");
                 $message->cc(array('harisaginting@gmail.com'));
-                $message->from('informasi@kitapermata.com','PERMATA GBKP RUNGGUN TAMBUN');
-            });
-        }
-
-        echo "success";
-    }
-
-    public function sendEmailBirthday()
-    {   
-        $user       = Anggota::whereNotNull("email")->whereNotNull("tanggal_lahir")->whereRaw("MONTH(tanggal_lahir) = ".date('m'))->whereRaw("DAY(tanggal_lahir) = ".date('d'))->get()->toArray();
-        // echo "bulan : ".date("m")." tanggal".date('d');die;
-        // echo json_encode($user);die;
-        foreach ($user as $key => $value) {
-             $model     = new Anggota();
-             $data      = $model->get_anggota($value["email"]);
-             $dataArr   = json_decode(json_encode($data),true); 
-             Mail::send('email.birthday', $dataArr, function($message) use ($data){     
-                $message->to($data->email, $data->nama_depan)->subject("Selamat Ulang Tahun ".$data->nama_depan);
-                $message->cc(array('harisaginting@gmail.com','pranatameliala@yahoo.co.id','nellaaginta@gmail.com','mikhatarigan28@gmail.com'));
                 $message->from('informasi@kitapermata.com','PERMATA GBKP RUNGGUN TAMBUN');
             });
         }

@@ -34,6 +34,9 @@ Route::group(['domain' => env('APP_URL')], function () {
     	Route::get('/ibadah/umum/add', 'IbadahUmumController@add')->name('app-ibadah-umum-add');
     	Route::get('/ibadah/umum/edit/{id}', 'IbadahUmumController@add')->name('app-ibadah-umum-edit');
 
+    	Route::get('/send-email/test', 'EmailController@test');
+    	Route::get('/send-email/birthday', 'EmailController@sendEmailBirthday');
+
 
     	// migrasi
     	// Route::get('/migrasi', 'UtilityController@migrasi');

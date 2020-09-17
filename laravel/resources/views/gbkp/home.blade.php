@@ -281,6 +281,11 @@
       padding-top: 0% !important;
       color: var(--main-secondary) !important;
     }
+    .title-visi{
+      text-align: center !important;
+      padding-right: 0px !important;
+      margin-right: 0px !important;
+    }
     .content-misi{
       padding-left: 0px !important;
     }

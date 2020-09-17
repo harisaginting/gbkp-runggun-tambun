@@ -3,7 +3,7 @@
  
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>GBKP RUNGGUN TAMBUN</title>
+  <title>PERMATA GBKP RUNGGUN TAMBUN</title>
   <style type="text/css">
   body {margin: 0; padding: 0; min-width: 100%!important;}
   img {height: auto;}
@@ -50,11 +50,11 @@
     <![endif]-->     
     <table bgcolor="#ffffff" class="content" align="center" cellpadding="0" cellspacing="0" border="0">
       <tr>
-        <td bgcolor="#0D1575" class="header">
+        <td bgcolor="#393f89" class="header">
           <table width="70" align="left" border="0" cellpadding="0" cellspacing="0">  
             <tr>
               <td height="70" style="padding: 0 20px 20px 0;">
-                <img class="fix" src="http://gbkprungguntambun.org/public/img/logo-gbkp.png" width="70" height="70" border="0" alt="" />
+                <img class="fix" src="{{url('/')}}/img/logo_permata.png" width="70" height="70" border="0" alt="" />
               </td>
             </tr>
           </table>
@@ -68,7 +68,12 @@
               <td height="70">
                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                   <tr>
-                    <td class="h1" style="color:#e6750a;padding: 5px 0 0 0;">
+                    <td class="subhead" style="color:#d94f47;padding: 0 0 0 3px;">
+                      PERMATA
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="h1" style="color:#faec35;padding: 5px 0 0 0;">
                       GBKP RUNGGUN TAMBUN
                     </td>
                   </tr>
@@ -76,11 +81,6 @@
               </td>
             </tr>
           </table>
-          <!--[if (gte mso 9)|(IE)]>
-                </td>
-              </tr>
-          </table>
-          <![endif]-->
         </td>
       </tr>
       <tr>
@@ -88,36 +88,23 @@
           <table width="100%" border="0" cellspacing="0" cellpadding="0">
             <tr>
               <td class="h5">
-                Shallom, Mejuah-juah Senina / Turang Kami {{$nama_depan ?? '<name>'}} 
+                Mejuah-juah 
               </td>
             </tr>
             <tr>
               <td>
-                <p>
-                <strong>Selamat Ulang Tahun {{$nama_depan}} {{$nama_belakang ?? ''}} </strong>
-                <br>
-                  GBKP Runggun Tambun mengucapkan selamat, semoga di ulang tahun yang ke-{{$umur}} ini, tetap kam semangat, jaga kesehatan selalu, dimudahkan segala urusan serta selalu menjadi hamba yang takut dan percaya pada berkat Tuhan.
-                  <br>
-                  <br>
-                  <br>
-                   <strong>Tuhan Yesus Memberkati, Amin.</strong>. 
-                   <br>
-                   <br>
-                   <br>
-                   <strong>GBKP Runggun Tambun</strong>
-                  </p>
-              </td>
+              hahshahaha
             </tr>
           </table>
         </td>
       </tr>
 
       <tr>
-        <td class="footer" bgcolor="#0D1575">
+        <td class="footer" bgcolor="#44525f">
           <table width="100%" border="0" cellspacing="0" cellpadding="0">
             <tr>
               <td align="center" class="footercopy">
-                <a href="https://gbkprungguntambun.org/">&reg; <strong>GBKP RUNGGUN TAMBUN</strong> {{date('Y')}}</a>
+                <a href="https://www.kitapermata.com/">&reg; PERMATA GBKP RUNGGUN TAMBUN {{date('Y')}}</a>
               </td>
             </tr>
           </table>

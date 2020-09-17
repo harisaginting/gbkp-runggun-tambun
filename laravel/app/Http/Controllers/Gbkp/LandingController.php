@@ -55,7 +55,7 @@ class LandingController extends Controller
     public function artikel($key = null)
     {	
         $page  = 1;
-        $limit = 10;
+        $limit = 15;
     	if (empty($key)) {
     		$artikel     = Artikel::select("*", DB::raw("DATE_FORMAT(updated_at,'%d-%m-%Y') AS publish_at "))->orderBy("updated_at","desc")->take($limit)->get();
     		return view('gbkp.artikel-list', compact('artikelList'));

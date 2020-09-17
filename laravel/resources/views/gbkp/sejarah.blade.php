@@ -31,6 +31,10 @@ h1, .strong {
     .singkatan{
       font-size: 0.8em !important;
     }
+    .container-content{
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
 </style>
 @endsection
@@ -45,17 +49,17 @@ h1, .strong {
           
           <div class="col-md-12 container-title-sejarah">
             <div class="w-100">
-              <div class="pt-3 text-center">
-                <h1 class="title-sejarah">Sejarah GBKP</h1>
+              <div class="pt-3 text-center px-2">
+                <h1 class="title-sejarah">Sejarah [GBKP] Gereja Batak Karo Protestan</h1>
               </div>
             </div>
           </div>
 
           <div class="col-md-8 offset-md-2 col-sm-12">
-            <div class="w-100 text-center pl-2 pr-2">
+            <div class="w-100 text-center pl-2 pr-2 pb-3 pt-2">
                 <img src="{{url('/public/img/logo-gbkp.png')}}" height="155" alt="Logo (GBKP Gereja Batak Karo Protestan)">
             </div>
-            <div class="w-100">
+            <div class="w-100 container-content">
               <p>Pekabaran Injil pertama ke daerah Karo merupakan jamahan tangan Tuhan untuk menyampaikan berita Keselamatan kepada masyarakat Karo. Kehadiran Pekabar Injil pertama di daerah Karo, dibagi atas dua kurun waktu oleh Lembaga Penelitian dan Studi DGI. Kurun waktu yang pertama disebut masa-masa permulaan, mulai tahun 1890-1906. Kurun waktu yang kedua disebut masa-masa Penanaman dan Penggarapan, mulai tahun 1906-1940.</p>
               <h3 class="mb-0 mt-2 pl-1">Masa-masa Permulaan (1890-1906)</h3>
               <p>Pekabaran Injil periode pertama ini diterima masyarakat Karo dengan permusuhan. Masyarakat Karo menentang Belanda karena Belanda mengambil tanah rakyat untuk ditanami tembakau. Orang Karo menunjukkan perlawanannya dengan membakar gudang-gudang tempat menyimpan tembakau pada malam hari, merusak tanaman tembakau dan bahkan mengancam jiwa para pengusaha.</p>

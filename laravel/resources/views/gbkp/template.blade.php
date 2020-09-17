@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="id-ID">
 <head>
     <meta charset="utf-8">
-    <title>{{$title ?? 'GBKP RUNGGUN TAMBUN'}}</title>
-    <meta charset="utf-8" />
+    <title>{{$title ?? 'Gereja Batak Karo Protestan [GBKP] Runggun Tambun'}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta name="keywords" content="GBKP, Greja Batak Karo Protestan, GBKP Runggun Tambun, GBKP Tambun, GBKP Klasis Bekasi Denpasar, Permata GBKP, KA/KR GBKP, Mamre GBKP,  Moria GBKP Karo, Kalak Karo, Kristen" />
-    <meta name=”description” content="{{$description ??'GBKP, Greja Batak Karo Protestan, GBKP Runggun Tambun, GBKP Tambun, GBKP Klasis Bekasi Denpasar, Permata GBKP, KA/KR GBKP, Mamre GBKP,  Moria GBKP Karo, Kalak Karo, Kristen'}}">
+    <meta name=”description” content="{{$description ??'GBKP, Gereja Batak Karo Protestan, GBKP Runggun Tambun, GBKP Tambun, GBKP Klasis Bekasi Denpasar, Permata GBKP, KA/KR GBKP, Mamre GBKP,  Moria GBKP Karo, Kalak Karo, Kristen'}}">
     <meta name="google" content="notranslate" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -37,7 +36,7 @@
     <script src="{{url('vendor/bootstrap.min.js')}}"></script>
 
     <!-- custom -->
-    <link rel="stylesheet" href="{{url('public/gbkp/home.css?v=').date('s')}}" />
+    <link rel="stylesheet" href="{{url('public/gbkp/landing.css?v=').date('s')}}" />
 
     <!-- Icon -->
     <link rel="stylesheet" href="{{url('vendor/fontawesome-all.min.css')}}" />
@@ -92,7 +91,7 @@
     </div>
     <body class="is-preload">
     <nav class="navbar navbar-light navbar-expand-lg fixed-top px-0" id="navbar-top">
-        <div class="container-fluid bg-primary">
+        <div class="container-fluid container-navbar">
           <a class="navbar-brand ml-3" href="{{url('/')}}" style="display: flex;">
             <img src="{{url('/public/img/logo-gbkp.png')}}" width="80" height="80" class="d-inline-block align-top" alt="logo gbkp">
             <div class="ml-2" style="margin-top: 1px;">
@@ -141,11 +140,11 @@
 
      <section id="contact">
         <div class="container-fluid pl-2 pr-2 pt-4 pb-2">
-        <div class="card border ">
-          <div class="card-header text-center title-contact py-3">
+        <div class="card card-contact">
+          <div class="card-header text-center card-contact-header py-3">
              Hubungi Kami
           </div>
-          <div class="card-body card-body-contact">
+          <div class="card-body card-contact-body">
               <div class="row">
                 <div class="col-lg-6 col-sm-12">
                     <div style="width: 100%"><iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=GBKP%20Runggun%20Tambun+(Gbkp%20Runggun%20Tambun)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
@@ -196,6 +195,18 @@
             );
           }
         });
+
+
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+          var currentScrollPos = window.pageYOffset;
+          if (prevScrollpos < currentScrollPos) {
+            $('nav').fadeOut();
+          } else {
+            $('nav').fadeIn();
+          }
+          prevScrollpos = currentScrollPos;
+        }
     </script>
     @yield('footer-js')
     </body>

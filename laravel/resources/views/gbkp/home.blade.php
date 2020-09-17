@@ -54,13 +54,6 @@
         border-bottom: 3px solid var(--main-secondary-3);
   }
 
-  .subtext-kategorial {
-      font-size: 1em;
-      font-weight: 600;
-      font-family: Poppins, sans-serif;
-      color: var(--main-secondary);
-  }
-
   .img-kategorial{
     max-width: 70px;
     max-height: 70px;
@@ -78,9 +71,14 @@
     min-height: 400px;
   }
 
-  .title-visimisi{
-    font-family: Montserrat;
-    font-weight: 600;
+
+  .container-visi{
+    background: linear-gradient(355deg,  rgba(255,182,88,1) 7%, rgba(255,182,88,1) 74%, rgba(255,255,255,1) 75%,rgba(255,255,255,1) 93%);
+  }
+
+  .title-visi{
+    font-family: Poppins;
+    font-weight: 700 !important;
     font-size: 5em;
     letter-spacing: 0.08em;
     padding-top: 5%;
@@ -94,15 +92,199 @@
     font-weight: 600;
   }
 
+
+  .title-misi{
+    font-family: Poppins;
+    font-weight: 700 !important;
+    font-size: 5em;
+    letter-spacing: 0.08em;
+    padding-top: 5%;
+    padding-left: 10px;
+  }
+
   .content-misi{
     padding-top: 10px;
-    padding-left: 20px;
+    padding-left: 10%;
     font-family: 'Roboto';
     font-size: 1.2em;
     font-weight: 600;
     color: var(--main-white);
   }
 
+  .container-misi{
+    background: linear-gradient(5deg, rgba(13,21,117,1) 6%, rgba(13,21,117,1) 7%, rgba(13,21,117,1) 76%, rgba(255,182,88,1) 77%,rgba(255,182,88,1) 93%);
+  }
+
+
+  /*GBKP*/
+  #gbkp-tambun{
+    background-color: var(--main-white);
+  }
+  .title-gbkp{
+    color: var(--main-primary);
+    font-size: 3em;
+    font-weight: 700;
+    font-family: Poppins, sans-serif;
+  }
+  .sub-title-gbkp{
+    font-size: 1.2em;
+    font-weight: 400;
+    font-family: Roboto, sans-serif;
+  }
+  .sub-title-gbkp a, .sub-title-gbkp b{
+    color: var(--main-secondary);
+  }
+
+  /*Kategorial*/
+  #kategorial{
+    background-color: var(--main-white-2);
+  }
+  .subtext-kategorial {
+    font-size: 1.5em;
+    font-weight: 700;
+    font-family: Poppins, sans-serif;
+    text-transform: uppercase;
+    color: var(--main-dark);
+  }
+
+  /*Kebaktian*/
+  .title-kebaktian, .sub-title-kebaktian, .sub-title-berita, .title-berita{
+    font-family: Poppins;
+    font-size: 1.25em;
+  }
+
+  .title-kebaktian{
+    font-weight: 700;
+    font-size: 2.2em;
+    color: var(--main-primary);
+  }
+  .sub-title-kebaktian{
+    margin-top: -15px;
+    padding-left: 2px;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    color: var(--main-dark-2);
+  }
+
+  .content-kebaktian-title{
+    margin-bottom: -2px;
+    font-size: 1.5em;
+    font-weight: 600;
+    font-family: Poppins;
+    color: var(--main-dark);
+  }
+
+  .content-kebaktian-subtitle{
+    color: var(--main-dark-1);
+    font-weight:600;
+    font-size: 1em;
+    margin-top: -18px;
+    padding-left: 5px;
+  }
+
+  .sub-content-kebaktian{
+      border: 1px solid #999999;
+      border-radius: 10px;
+      padding: 10px;
+      background: var(--main-primary-1);
+  }
+  .content-kebaktian-tema{
+    font-size: 2em;
+    text-align: center;
+    font-weight: 600;
+    font-family: Poppins;
+    line-height: 1.2em;
+    color: var(--main-secondary);
+  }
+  .content-kebaktian-pengkotbah{
+    font-size: 1em;
+    text-align: center;
+    font-weight: 600;
+    font-family: Poppins;
+    color: var(--main-dark);
+  }
+
+
+  /*berita*/
+  .title-berita{
+    font-weight: 700;
+    font-size: 2.2em;
+    letter-spacing: 0.05em;
+    color: var(--main-secondary);
+  }
+
+  .sub-title-berita{
+    margin-top: -15px;
+    padding-left: 2px;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    color: var(--main-dark-2);
+  }
+
+  .card-berita{
+      border: 2px solid var(--main-secondary-3) !important;
+      border-radius: 10px;
+  }
+
+  .content-berita-date{
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 0.7em;
+    color: var(--main-dark-2);
+    float: left;
+  }
+
+  .card-body-berita{
+    background-color: var(--main-white) !important;
+    color: black;
+    font-family: Roboto;
+    max-height: 300px;
+    min-height: 300px;
+  }
+
+  .content-berita-value{
+    max-height: 220px;
+    min-height: 220px;
+    overflow-y: scroll;
+  }
+
+  .card-body-berita::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .content-berita-title{
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 1.25em;
+    line-height: 1.1em;
+    color: var(--main-dark) !important;
+  }
+
+  .card-body-berita{
+    max-height: 400px;
+    min-height: 400px;
+  }
+
+  .content-berita-value{
+    max-height: 120px;
+    min-height: 120px;
+    overflow-y: scroll;
+    padding-left: 0px !important;
+    padding-top: 0.5rem !important
+  }
+
+  @media screen and (max-width: 580px) {
+    .title-misi{
+      text-align: center !important;
+      padding-left: 0px !important;
+      margin-left: 0px !important;
+      padding-top: 0% !important;
+      color: var(--main-secondary) !important;
+    }
+    .content-misi{
+      padding-left: 0px !important;
+    }
+  }
 </style>
 @endsection
 
@@ -111,8 +293,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
 @endsection
 
-@section('content')
-          
+@section('content')        
       <section id="home">
        <div class="container-fluid ">
           <div class="row">
@@ -146,72 +327,37 @@
         </div>
       </section>
 
-      <section id="kategorial" class="container-fluid pb-3">
-          <div class="row">
-            <div class="col-12 line-kategorial">
+      <section id="gbkp-tambun" class="container-fluid pt-5 pb-5">
+        <div class="row">
+            <div class="col-md-10 offset-md-1 px-0">
+                <div class="w-100 text-center pt-3 px-1">
+                    <h1 class="title-gbkp">GBKP Runggun Tambun</h1>
+                </div>
+                <div class="w-100 text-center px-3 pb-5">
+                    <p class="sub-title-gbkp">
+                        adalah bagian dari <a href="https://gbkp.or.id/" class="sub-title-gbkp-highlight">Gereja Batak Karo Protestan (GBKP)</a> yang berlokasi di Kecamatan Tambun Selatan Kabupaten Bekasi dan tergabung dalam <a href="http://www.gbkp-kbd.org/" class="sub-title-gbkp-highlight">Klasis Bekasi-Denpasar</a>. Merupakan persekutuan warga gereja yang hidup dan melayani dalam konteks budaya Karo, antara lain prinsip <b>runggu</b> (musyawarah) dan <b>sihamat-hamaten</b> (saling menghormati) dalam kekerabatan <b>merga si lima</b>, <b>rakut si telu</b>, <b>tutur si waluh</b>, <b>perkade-kaden si sepuludua tambah sada</b> (lima marga, tiga ikatan, delapan jenis hubungan, duabelas ditambah satu jenis kekerabatan).
+                    </p>
+                </div>
             </div>
-          </div>
-          <div class="row pb-0 pt-3"  role="tablist">
-              <div class="card border-0 col-md-2 col-4 offset-md-1 container-logo-kategorial pt-2">
-                  <div class="container-img-kategorial">
-                      <img src="{{url('/public/img/logo-mamre.png')}}" alt="logo mamre" class="img-kategorial" >
-                  </div>
-                  <div class="text-center subtext-kategorial mt-1">
-                    Mamre
-                  </div>
-              </div>
-              <div class="card border-0 col-md-2 col-4 container-logo-kategorial pt-2">
-                  <div class="container-img-kategorial">
-                      <img src="{{url('/public/img/logo-moria.png')}}" alt="logo moria" class="img-kategorial" >
-                  </div>
-                   <div class="text-center subtext-kategorial mt-1">
-                    Moria
-                  </div>
-              </div>
-              <div class="card border-0 col-md-2 col-4 container-logo-kategorial pt-2">
-                  <div class="container-img-kategorial">
-                      <img src="{{url('/public/img/logo-gbkp.png')}}" alt="logo saitun" class="img-kategorial" >
-                  </div>
-                   <div class="text-center subtext-kategorial mt-1">
-                    Saitun
-                  </div>
-              </div>
-              <div class="card border-0 col-md-2 col-4 offset-md-0 offset-2 container-logo-kategorial pt-2">
-                  <div class="container-img-kategorial">
-                      <img src="{{url('/public/img/logo-kakr.png')}}" alt="logo ka/kr" class="img-kategorial" >
-                  </div>
-                   <div class="text-center subtext-kategorial mt-1">
-                    KA/KR
-                  </div>
-              </div>
-              <div class="card border-0 col-md-2 col-4 container-logo-kategorial pt-2">
-                  <a href="{{env('APP_URL_FRONTEND_PERMATA')}}" target="_blank" >
-                  <div class="container-img-kategorial" href="https://kitapermata.com" target="_blank">
-                      <img src="{{url('/public/img/logo-permata.png')}}" class="img-kategorial" alt="logo permata">
-                  </div>
-                   <div class="text-center subtext-kategorial mt-1">
-                    Permata
-                  </div>
-                  </a>
-              </div>
-          </div>
+        </div>
       </section>
 
       <section id="visimisi" class="container-fluid">
           <div class="row">
-              <div class="card border-0 col-md-6 px-0 ">
-                <div class="w-100 bg-primary-1 px-3">
-                  <div class="title-visimisi color-secondary">Visi</div>
-                  <div class="content-visi">
-                    GBKP menjadi kawan sekerja Allah untuk menyatakan rahmat Allah kepada dunia. Dalam Bahasa Inggris: to be God’s fellow-workers to manifest God’s mercy to the world (1 Korintus 3:9 dan I Petrus 2:9-10). 
-                    <p>Dalam bahasa Karo diartikan sebagai <br><strong class="color-secondary">“GBKP aron Dibata guna jadi pasu-pasu man isi doni”.</strong></p>
+
+              <div class="card border-0 col-md-12 px-0">
+                <div class="w-100 text-right px-3 pt-5 container-visi">
+                  <div class="title-visi color-secondary pr-5 mr-5">Visi</div>
+                  <div class="content-visi pr-5 text-left">
+                    <p class="mb-0">GBKP menjadi kawan sekerja Allah untuk menyatakan rahmat Allah kepada dunia. Dalam Bahasa Inggris: to be God’s fellow-workers to manifest God’s mercy to the world (1 Korintus 3:9 dan I Petrus 2:9-10).</p>
+                    <p>Dalam bahasa Karo diartikan sebagai <strong class="color-secondary">“GBKP aron Dibata guna jadi pasu-pasu man isi doni”.</strong></p>
                   </div>
                 </div>
               </div>
 
-              <div class="card border-0 col-md-6 px-0 ">
-                <div class="w-100 bg-secondary px-3">
-                  <div class="title-visimisi color-primary-1">Misi</div>
+              <div class="card border-0 col-md-12 px-0 ">
+                <div class="w-100 container-misi px-3">
+                  <div class="title-misi color-white pl-5 ml-5">Misi</div>
                   <div class="content-misi">
                     <ol>
                       <li>Menumbuhkembangkan <strong class="color-primary-1">spiritualitas jemaat berbasis Alkitab</strong></li>
@@ -221,6 +367,53 @@
                     </ol>
                   </div>
                 </div>
+              </div>
+          </div>
+      </section>
+
+      <section id="kategorial" class="container-fluid pb-5 pt-3">
+          <div class="row pb-0 pt-3" role="tablist">
+              <div class="card border-0 col-md-2 col-6 offset-md-1 container-logo-kategorial pt-3">
+                  <div class="container-img-kategorial">
+                      <img src="{{url('/public/img/logo-mamre.png')}}" alt="logo mamre" class="img-kategorial" >
+                  </div>
+                  <div class="text-center subtext-kategorial mt-1">
+                    Mamre
+                  </div>
+              </div>
+              <div class="card border-0 col-md-2 col-6 container-logo-kategorial pt-3">
+                  <div class="container-img-kategorial">
+                      <img src="{{url('/public/img/logo-moria.png')}}" alt="logo moria" class="img-kategorial" >
+                  </div>
+                   <div class="text-center subtext-kategorial mt-1">
+                    Moria
+                  </div>
+              </div>
+              <div class="card border-0 col-md-2 col-6 container-logo-kategorial pt-3">
+                  <div class="container-img-kategorial">
+                      <img src="{{url('/public/img/logo-gbkp.png')}}" alt="logo saitun" class="img-kategorial" >
+                  </div>
+                   <div class="text-center subtext-kategorial mt-1">
+                    Saitun
+                  </div>
+              </div>
+              <div class="card border-0 col-md-2 col-6 offset-md-0 container-logo-kategorial pt-3">
+                  <div class="container-img-kategorial">
+                      <img src="{{url('/public/img/logo-kakr.png')}}" alt="logo ka/kr" class="img-kategorial" >
+                  </div>
+                   <div class="text-center subtext-kategorial mt-1">
+                    KA/KR
+                  </div>
+              </div>
+              <div class="card border-0 col-md-2 col-sm-6 container-logo-kategorial pt-3">
+                  <a href="{{env('APP_URL_FRONTEND_PERMATA')}}" target="_blank" >
+                  <div class="container-img-kategorial" href="https://kitapermata.com" target="_blank">
+                      <img src="{{url('/public/img/logo-permata.png')}}" class="img-kategorial" alt="logo permata">
+                  </div>
+                   <div class="text-center subtext-kategorial mt-1">
+                    Permata
+                  </div>
+                  </a>
               </div>
           </div>
       </section>
@@ -237,11 +430,11 @@
       </section>
  -->
 
-       <section class="container-fluid pl-0 pr-0" id="ibadah">
+       <section class="container-fluid pl-0 pr-0 pt-5" id="ibadah">
           <div class="row">
-            <div class="col-md-12 container-title-ibadah">
+            <div class="col-md-12">
                 <div class="w-100">
-                  <div class="pt-3 pl-3">
+                  <div class="pl-3">
                     <h1 class="title-kebaktian">JADWAL KEBAKTIAN</h1>
                     <h2 class="sub-title-kebaktian">GBKP RUNGGUN TAMBUN</h2>
                   </div>
@@ -254,72 +447,71 @@
                  <div class="row content-kebaktian pb-2">
                 @foreach($ibadah as $k => $i)
                     <div class="col-md-6 col-sm-12 mb-2">
-                        <div class="container-fluid pl-1 pr-1 sub-content-kebaktian bg-primary">
-                            <div class="row text-center">
+                        <div class="container-fluid pl-1 pr-1 sub-content-kebaktian">
+                            <div class="row">
                                 <div class="col-sm-12 mb-2">
-                                  <h5 class="content-kebaktian-title fw8">{{$i['nama']}}</h5>
+                                  <h5 class="content-kebaktian-title">{{$i['nama']}}</h5>
                                   <span class="content-kebaktian-subtitle">{{$i['tanggal_ibadah']}} - {{$i['waktu_mulai']}} s/d {{$i['waktu_selesai']}} </span>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Tema</div>
-                                <div class="col-sm-12 col-md-7 pl-5 color-secondary fw8">{{$i['tema']}}</div>
+                                <div class="col-sm-12 content-kebaktian-tema">{{$i['tema']}}</div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Invocatio</div>
-                                <div class="col-sm-12 col-md-7 pl-5 color-white fw8 fw8">{{$i['invocatio']}}</div>
+                                <div class="col-sm-12 content-kebaktian-pengkotbah">{{$i['pengkotbah']}}</div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Ogen</div>
-                                <div class="col-sm-12 col-md-7 pl-5 color-secondary fw8">{{$i['ogen']}}</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Khotbah</div>
-                                <div class="col-sm-12 col-md-7 pl-5 color-white fw8 fw8">{{$i['khotbah']}}</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Pengkotbah</div>
-                                <div class="col-sm-12 col-md-7 pl-5 color-secondary fw8">{{$i['pengkotbah']}}</div>
-                            </div>
-                            @if(!empty($i['keterangan']))
-                               <div class="row">
-                                  <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Keterangan</div>
-                                  <div class="col-sm-12 col-md-7 pl-5 color-secondary fw8">{{$i['keterangan']}}</div>
-                              </div>
-                            @endif
-                            <div class="row">
-                                <div class="col-sm-12 col-md-10 offset-md-1 mt-1 text-right">
-                                  <button class="btn btn-primary " type="button" data-toggle="collapse" data-target="#collapseIbadah-{{$k}}" aria-expanded="false" aria-controls="collapseIbadah-{{$k}}">
-                                    <span class="color-white">Detail</span>
+                                <div class="col-sm-12 col-md-10 offset-md-1 mt-1 text-center">
+                                  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseIbadah-{{$k}}" aria-expanded="false" aria-controls="collapseIbadah-{{$k}}">
+                                    <span class="color-secondary"><i class="fa fa-arrow-down"></i></span>
                                   </button>
                                 </div>
                             </div>
+
                             <div class="collapse" id="collapseIbadah-{{$k}}">
+                                @if(!empty($i['keterangan']))
+                                   <div class="row">
+                                      <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Keterangan</div>
+                                      <div class="col-sm-12 col-md-7 pl-5 color-dark fw8">{{$i['keterangan']}}</div>
+                                  </div>
+                                @endif
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Invocatio</div>
+                                    <div class="col-sm-12 col-md-7 pl-5 color-dark fw8">{{$i['invocatio']}}</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Ogen</div>
+                                    <div class="col-sm-12 col-md-7 pl-5 color-dark fw8">{{$i['ogen']}}</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Khotbah</div>
+                                    <div class="col-sm-12 col-md-7 pl-5 color-dark fw8">{{$i['khotbah']}}</div>
+                                </div>
                                 <div class="row">
                                     <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Liturgi</div>
-                                    <div class="col-sm-12 col-md-7 pl-5 color-white fw8 fw8">{{$i['liturgi']}}</div>
+                                    <div class="col-sm-12 col-md-7 pl-5 color-dark fw8">{{$i['liturgi']}}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Siermomo</div>
-                                    <div class="col-sm-12 col-md-7 pl-5 color-secondary fw8">{{$i['siermomo']}}</div>
+                                    <div class="col-sm-12 col-md-7 pl-5 color-dark fw8">{{$i['siermomo']}}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Sinaruh</div>
-                                    <div class="col-sm-12 col-md-7 pl-5 color-white fw8 fw8">{{$i['sinaruh']}}</div>
+                                    <div class="col-sm-12 col-md-7 pl-5 color-dark fw8">{{$i['sinaruh']}}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Koordinator</div>
-                                    <div class="col-sm-12 col-md-7 pl-5 color-secondary fw8">{{$i['koordinator']}}</div>
+                                    <div class="col-sm-12 col-md-7 pl-5 color-dark fw8">{{$i['koordinator']}}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins">Organis</div>
-                                    <div class="col-sm-12 col-md-7 pl-5 color-white fw8 fw8">{{$i['organis']}}</div>
+                                    <div class="col-sm-12 col-md-7 pl-5 color-dark fw8">{{$i['organis']}}</div>
                                 </div>
 
                                 @foreach($i['songleader2'] as $x => $y)
                                   <div class="row">
                                       <div class="col-sm-12 col-md-4 offset-md-1 mt-1 poppins"><?= $x == 0 ? 'Song Leader ' : '' ?></div>
-                                      <div class="col-sm-12 col-md-7 pl-5 color-secondary fw6">{{$y}}</div>
+                                      <div class="col-sm-12 col-md-7 pl-5 color-dark fw6">{{$y}}</div>
                                   </div>
                                 @endforeach
 
@@ -330,7 +522,7 @@
                                     </div>
                                      @if(!empty($i['link_page']))
                                       <div class="col-sm-12 col-md-8 offset-md-2 text-center mt-0 pt-0 container-button-ibadah">
-                                        <a href="{{$i['link_page']}}" class="btn btn-primary" target="_blank">SUMBER</a>
+                                        <a href="{{$i['link_page']}}" class="btn btn-primary" target="_blank"><span>sumber</span></a>
                                       </div>
                                      @endif
                                   </div>
@@ -345,11 +537,11 @@
           </div>
       </section>
 
-      <section class="container-fluid pl-0 pr-0 pt-0"  id="berita">
+      <section class="container-fluid pl-0 pr-0 pt-4"  id="berita">
         <div class="row">
-            <div class="col-md-12 container-title-berita">
+            <div class="col-md-12">
                 <div class="w-100">
-                  <div class="pt-3 pl-3">
+                  <div class="pl-3">
                     <h1 class="title-berita">WARTA JEMAAT</h1>
                     <h2 class="sub-title-berita">GBKP RUNGGUN TAMBUN</h2>
                   </div>
@@ -360,16 +552,15 @@
                 <div class="container-fluid">
                  <div class="row">
                   @foreach($artikel as $key => $value)
-                  <div class="col-md-6 col-sm-12">
+                  <div class="col-md-4 col-sm-12">
                     <div class="card card-berita mb-4">
-                      <div class="card-body card-body-berita py-1">
+                      <div class="card-body card-body-berita py-3">
                         <div class="w-100 mb-2">
-                          <div class="content-berita-date">{{$value->publish_at ? $value->publish_at : '' }}</div>
                           <a href="{{url('/').'/artikel/'.$value->url_key}}">
                             <div class="content-berita-title">{{$value->title ? $value->title : ''}}</div>
                           </a>
                         </div>
-                        <div class="d-sm-inline-flex d-md-flex justify-content-sm-end justify-content-md-end  flex-sm-column flex-md-row float-left">
+                        <div class="d-sm-inline-flex d-md-flex justify-content-sm-end justify-content-md-end  flex-sm-column float-left">
                           <div class="text-center">
                             <img width="200" src="{{$value->image_mobile ? url('/').'/public/img/artikel/'.$value->image_mobile : 'https://via.placeholder.com/300x300/000/808080'}}" class="rounded img-berita" alt="{{$value->title ? $value->title : ''}}">
                           </div>
@@ -380,6 +571,7 @@
                       </div>
 
                       <div class="card-footer text-right pt-1 bg-white pb-1">
+                        <div class="content-berita-date">{{$value->publish_at ? $value->publish_at : '' }}</div>
                         <a href="{{url('/').'/artikel/'.$value->url_key}}" class="btn btn-primary btn-sm"><span>Lanjutkan</span></a>
                       </div>
                     </div>
@@ -388,8 +580,8 @@
                   </div>
                    @if($artikelmore)
                     <div class="row">
-                        <div class="col-md-12 w-100 text-right mb-5 pr-3" style="margin-top:-20px;">
-                          <a href="#berita">Lihat berita lainnya >>> </a>
+                        <div class="col-md-12 w-100 text-center">
+                          <a href="{{url('/').'/artikel'}}"><span class="color-secondary"><< Lihat Berita Lainnya >> </span></a>
                         </div>
                     </div>
                     @endif

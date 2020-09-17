@@ -440,8 +440,8 @@
             <div class="col-md-12">
                 <div class="w-100">
                   <div class="pl-3">
-                    <h1 class="title-kebaktian">JADWAL KEBAKTIAN</h1>
-                    <h2 class="sub-title-kebaktian">GBKP RUNGGUN TAMBUN</h2>
+                    <h2 class="title-kebaktian">JADWAL KEBAKTIAN</h2>
+                    <h4 class="sub-title-kebaktian">GBKP RUNGGUN TAMBUN</h4>
                   </div>
                 </div>
             </div>
@@ -547,8 +547,8 @@
             <div class="col-md-12">
                 <div class="w-100">
                   <div class="pl-3">
-                    <h1 class="title-berita">WARTA JEMAAT</h1>
-                    <h2 class="sub-title-berita">GBKP RUNGGUN TAMBUN</h2>
+                    <h2 class="title-berita">WARTA JEMAAT</h2>
+                    <h4 class="sub-title-berita">GBKP RUNGGUN TAMBUN</h4>
                   </div>
                 </div>
             </div>

@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>{{$title ?? 'Gereja Batak Karo Protestan [GBKP] Runggun Tambun'}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="keywords" content="GBKP, Greja Batak Karo Protestan, GBKP Runggun Tambun, GBKP Tambun, GBKP Klasis Bekasi Denpasar, Permata GBKP, KA/KR GBKP, Mamre GBKP,  Moria GBKP Karo, Kalak Karo, Kristen" />
-    <meta name=”description” content="{{$description ??'GBKP, Gereja Batak Karo Protestan, GBKP Runggun Tambun, GBKP Tambun, GBKP Klasis Bekasi Denpasar, Permata GBKP, KA/KR GBKP, Mamre GBKP,  Moria GBKP Karo, Kalak Karo, Kristen'}}">
+    <meta name="keywords" content="GBKP Tambun, GBKP, Greja Batak Karo Protestan, GBKP Runggun Tambun, GBKP Klasis Bekasi Denpasar, Permata GBKP, KA/KR GBKP, Mamre GBKP,  Moria GBKP Karo, Kalak Karo, Kristen" />
+    <meta name=”description” content="{{$description ??'Gereja Batak Karo Protestan [GBKP] Runggun Tambun, Klasis Bekasi Denpasar, Permata GBKP, KA/KR GBKP, Mamre GBKP,  Moria GBKP, Kalak Karo, Kristen Protestan, GBKP.'}}">
     <meta name="google" content="notranslate" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -93,8 +93,8 @@
     <nav class="navbar navbar-light navbar-expand-lg fixed-top px-0" id="navbar-top">
         <div class="container-fluid container-navbar">
           <a class="navbar-brand ml-3" href="{{url('/')}}" style="display: flex;">
-            <img src="{{url('/public/img/logo-gbkp.png')}}" width="80" height="80" class="d-inline-block align-top" alt="logo gbkp">
-            <div class="ml-2" style="margin-top: 1px;">
+            <img src="{{url('/public/img/logo-gbkp.png')}}" width="80" height="80" class="d-inline-block align-top logo-header" alt="logo gbkp">
+            <div class="ml-2 mt-1">
               <div class="color-secondary gbkp-header">GBKP</div>
               <div class="color-secondary-2 gbkp-subheader">Greja Batak Karo Protestan</div>
             </div>

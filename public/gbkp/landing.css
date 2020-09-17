@@ -307,6 +307,22 @@ a {
 }
 
 @media screen and (max-width: 580px) {
+  .gbkp-header{
+    font-size: 1.5em;
+  }
+  .gbkp-subheader{
+    font-size: 0.5em;
+  }
+
+  .navbar-toggler{
+    margin-right: 11px;
+    margin-left: 5px;
+  }
+
+  .navbar-collapse{
+    margin-left: 15px;
+  }
+
   .iframeibadah{
     padding-left: 2em !important;
   }

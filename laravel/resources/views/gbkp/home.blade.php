@@ -435,7 +435,7 @@
       </section>
  -->
 
-       <section class="container-fluid pl-0 pr-0 pt-5" id="ibadah">
+      <!--  <section class="container-fluid pl-0 pr-0 pt-5" id="ibadah">
           <div class="row">
             <div class="col-md-12">
                 <div class="w-100">
@@ -540,7 +540,7 @@
               </div>
             </div>
           </div>
-      </section>
+      </section> -->
 
       <section class="container-fluid pl-0 pr-0 pt-4"  id="berita">
         <div class="row">
